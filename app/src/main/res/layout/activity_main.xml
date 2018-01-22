@@ -10,40 +10,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is the lightest element in the universe?" />
+        android:text="Welcome to the quizz:" />
 
-    <RadioGroup
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/hydrogen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClick1"
-            android:text="Hydrogen" />
-
-        <RadioButton
-            android:id="@+id/helium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClick1"
-            android:text="Helium" />
-
-        <RadioButton
-            android:id="@+id/nitrogen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClick1"
-            android:text="Nitrogen" />
-
-        <RadioButton
-            android:id="@+id/oxygen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClick1"
-            android:text="Oxygen" />
-    </RadioGroup>
+        android:onClick="next"
+        android:text="NEXT" />
 
 </LinearLayout>
