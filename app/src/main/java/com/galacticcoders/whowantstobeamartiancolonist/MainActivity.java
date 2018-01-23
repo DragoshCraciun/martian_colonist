@@ -7,6 +7,9 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static int correctAnswers = 0;
+    public static int wrongAnswers = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionOne">
+    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionTwo">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is the lightest element in the universe?" />
+        android:text="How long is a day on Mars?" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -18,32 +18,38 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/hydrogen"
+            android:id="@+id/mars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="Hydrogen" />
+            android:text="1d 0h 40m" />
 
         <RadioButton
-            android:id="@+id/helium"
+            android:id="@+id/venus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="Helium" />
+            android:text="116d 18h 0m" />
 
         <RadioButton
-            android:id="@+id/nitrogen"
+            android:id="@+id/mercury"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="Nitrogen" />
+            android:text="58d 15h 30" />
 
         <RadioButton
-            android:id="@+id/oxygen"
+            android:id="@+id/jupiter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="Oxygen" />
+            android:text="0d 9h 56m" />
     </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="results"
+        android:text="Final Answer" />
 
 </LinearLayout>

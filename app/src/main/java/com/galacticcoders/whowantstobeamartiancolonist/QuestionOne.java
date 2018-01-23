@@ -9,10 +9,11 @@ import android.widget.Toast;
 
 public class QuestionOne extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question_one);
+        setContentView(R.layout.question_one);
     }
 
     public void onRadioButtonClick(View view) {
@@ -25,28 +26,44 @@ public class QuestionOne extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Right answer!", Toast.LENGTH_SHORT).show();
-                    Intent nextQuestion = new Intent(this, QuestionTwo.class);
-                    startActivity(nextQuestion);
+                    MainActivity.correctAnswers++;
                 }
                 break;
             case R.id.helium:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
+                    MainActivity.wrongAnswers++;
                 }
                 break;
             case R.id.nitrogen:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
+                    MainActivity.wrongAnswers++;
                 }
                 break;
             case R.id.oxygen:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
+                    MainActivity.wrongAnswers++;
                 }
                 break;
         }
     }
+
+    // Intent to move to the next question
+    public void nextQuestion(View view) {
+        Intent nextQuestion = new Intent(this, QuestionTwo.class);
+        startActivity(nextQuestion);
+    }
+
+    /**
+     * Prevents user to go to the previous question
+     */
+    @Override
+    public void onBackPressed() {
+    }
+
 }
