@@ -19,6 +19,7 @@
         <activity android:name=".QuestionOne" />
         <activity android:name=".QuestionTwo" />
         <activity android:name=".ResultActivity"/>
+        <activity android:name=".QuestionThree"/>
     </application>
 
 </manifest>

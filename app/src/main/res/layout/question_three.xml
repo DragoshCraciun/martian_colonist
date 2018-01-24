@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionThree">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is mars atmosphere made of?" />
+
+    <CheckBox
+        android:id="@+id/argon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClick"
+        android:text="Argon" />
+
+    <CheckBox
+        android:id="@+id/carbon_dioxide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClick"
+        android:text="Carbon dioxide" />
+
+    <CheckBox
+        android:id="@+id/methane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClick"
+        android:text="Methane" />
+
+    <CheckBox
+        android:id="@+id/ammonia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClick"
+        android:text="Ammonia" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="results"
+        android:text="Final Answer" />
+
+</LinearLayout>
