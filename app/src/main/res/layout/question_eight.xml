@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionEight">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Which of these are Mars moons?" />
+
+    <CheckBox
+        android:id="@+id/phobos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClick"
+        android:text="Phobos" />
+
+    <CheckBox
+        android:id="@+id/deimos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClick"
+        android:text="Deimos" />
+
+    <CheckBox
+        android:id="@+id/callisto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClick"
+        android:text="Callisto" />
+
+    <CheckBox
+        android:id="@+id/titan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClick"
+        android:text="Titan" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nextQuestion"
+        android:text="Final Answer" />
+
+</LinearLayout>

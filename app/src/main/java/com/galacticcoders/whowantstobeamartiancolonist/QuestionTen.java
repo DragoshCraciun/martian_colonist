@@ -7,12 +7,12 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-public class QuestionSix extends AppCompatActivity {
+public class QuestionTen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.question_six);
+        setContentView(R.layout.question_ten);
     }
 
     public void onRadioButtonClick(View view) {
@@ -21,28 +21,28 @@ public class QuestionSix extends AppCompatActivity {
 
         // Check which checkbox was clicked
         switch (view.getId()) {
-            case R.id.marsAU:
+            case R.id.marsYear:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Right answer!", Toast.LENGTH_SHORT).show();
                     MainActivity.correctAnswers++;
                 }
                 break;
-            case R.id.venusAU:
+            case R.id.venusYear:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
                     MainActivity.wrongAnswers++;
                 }
                 break;
-            case R.id.jupiterAU:
+            case R.id.jupiterYear:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
                     MainActivity.wrongAnswers++;
                 }
                 break;
-            case R.id.saturnAU:
+            case R.id.mercuryYear:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
@@ -54,7 +54,7 @@ public class QuestionSix extends AppCompatActivity {
 
     // Intent to move to the next question
     public void nextQuestion(View view) {
-        Intent results = new Intent(this, QuestionSeven.class);
+        Intent results = new Intent(this, ResultActivity.class);
         startActivity(results);
     }
 

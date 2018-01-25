@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionSix">
+    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionNine">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is the distance between Earth and Mars in Astronomical Units?" />
+        android:text="What is the surface temperature on Mars?" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -18,32 +18,32 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/marsAU"
+            android:id="@+id/marsTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="0.52 AU" />
+            android:text="-153 to 20&#x2103;" />
 
         <RadioButton
-            android:id="@+id/venusAU"
+            android:id="@+id/venusTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="0.28 AU" />
+            android:text="462&#x2103;" />
 
         <RadioButton
-            android:id="@+id/jupiterAU"
+            android:id="@+id/earthTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="4.2 AU" />
+            android:text="-88&#x2103; to 58&#x2103;" />
 
         <RadioButton
-            android:id="@+id/saturnAU"
+            android:id="@+id/mercuryTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="9.7 AU" />
+            android:text="-173&#x2103; to 427&#x2103;" />
 
     </RadioGroup>
 

@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionSix">
+    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionTen">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is the distance between Earth and Mars in Astronomical Units?" />
+        android:text="How long is a year on Mars?" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -18,32 +18,32 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/marsAU"
+            android:id="@+id/marsYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="0.52 AU" />
+            android:text="687 days" />
 
         <RadioButton
-            android:id="@+id/venusAU"
+            android:id="@+id/venusYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="0.28 AU" />
+            android:text="225 days" />
 
         <RadioButton
-            android:id="@+id/jupiterAU"
+            android:id="@+id/jupiterYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="4.2 AU" />
+            android:text="4,333 days AU" />
 
         <RadioButton
-            android:id="@+id/saturnAU"
+            android:id="@+id/mercuryYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="9.7 AU" />
+            android:text="88 days" />
 
     </RadioGroup>
 

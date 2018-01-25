@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionSeven">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Who are the Greek Gods associated with this planets in ancient Roman religion and myth?" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mars:" />
+
+        <EditText
+            android:id="@+id/marsGod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Good of War"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Venus:" />
+
+        <EditText
+            android:id="@+id/venusGod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Goddess of Love"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jupiter:" />
+
+        <EditText
+            android:id="@+id/jupiterGod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="God of Thunder"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earth:" />
+
+        <EditText
+            android:id="@+id/earthGod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Goddess of Earth"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nextQuestion"
+        android:text="Final Answer" />
+
+</LinearLayout>
