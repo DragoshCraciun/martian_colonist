@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How long is a day on Mars?" />
+        android:text="@string/question_two" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -22,34 +22,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="1d 0h 40m" />
+            android:text="@string/day_1" />
 
         <RadioButton
             android:id="@+id/venus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="116d 18h 0m" />
+            android:text="@string/day_116" />
 
         <RadioButton
             android:id="@+id/mercury"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="58d 15h 30" />
+            android:text="@string/day_58" />
 
         <RadioButton
             android:id="@+id/jupiter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="0d 9h 56m" />
+            android:text="@string/day_0" />
     </RadioGroup>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="nextQuestion"
-        android:text="Final Answer" />
+        android:text="@string/final_answer" />
 
 </LinearLayout>

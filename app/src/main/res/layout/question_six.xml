@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is the distance between Earth and Mars in Astronomical Units?" />
+        android:text="@string/question_six" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -22,28 +22,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="0.52 AU" />
+            android:text="@string/au_.5" />
 
         <RadioButton
             android:id="@+id/venusAU"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="0.28 AU" />
+            android:text="@string/au_.2" />
 
         <RadioButton
             android:id="@+id/jupiterAU"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="4.2 AU" />
+            android:text="@string/au_4" />
 
         <RadioButton
             android:id="@+id/saturnAU"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="9.7 AU" />
+            android:text="@string/au_9" />
 
     </RadioGroup>
 
@@ -51,6 +51,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="nextQuestion"
-        android:text="Final Answer" />
+        android:text="@string/final_answer" />
 
 </LinearLayout>

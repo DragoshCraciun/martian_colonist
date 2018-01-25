@@ -10,40 +10,40 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is mars atmosphere made of?" />
+        android:text="@string/question_three" />
 
     <CheckBox
         android:id="@+id/argon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onCheckboxClick"
-        android:text="Argon" />
+        android:text="@string/argon" />
 
     <CheckBox
         android:id="@+id/carbon_dioxide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onCheckboxClick"
-        android:text="Carbon dioxide" />
+        android:text="@string/carbon_dioxide" />
 
     <CheckBox
         android:id="@+id/methane"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onCheckboxClick"
-        android:text="Methane" />
+        android:text="@string/methane" />
 
     <CheckBox
         android:id="@+id/ammonia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onCheckboxClick"
-        android:text="Ammonia" />
+        android:text="@string/ammonia" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="nextQuestion"
-        android:text="Final Answer" />
+        android:text="@string/final_answer" />
 
 </LinearLayout>

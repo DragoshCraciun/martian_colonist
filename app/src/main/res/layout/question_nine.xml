@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is the surface temperature on Mars?" />
+        android:text="@string/question_nine" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -22,28 +22,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="-153 to 20&#x2103;" />
+            android:text="@string/minus_153" />
 
         <RadioButton
             android:id="@+id/venusTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="462&#x2103;" />
+            android:text="@string/plus_462" />
 
         <RadioButton
             android:id="@+id/earthTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="-88&#x2103; to 58&#x2103;" />
+            android:text="@string/minus_88" />
 
         <RadioButton
             android:id="@+id/mercuryTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="-173&#x2103; to 427&#x2103;" />
+            android:text="@string/minus_173" />
 
     </RadioGroup>
 
@@ -51,6 +51,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="nextQuestion"
-        android:text="Final Answer" />
+        android:text="@string/final_answer" />
 
 </LinearLayout>

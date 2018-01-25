@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How strong is the gravity on Mars?" />
+        android:text="@string/question_five" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -22,28 +22,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="0.376G" />
+            android:text="@string/g_0" />
 
         <RadioButton
             android:id="@+id/earthG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="1G" />
+            android:text="@string/g_1" />
 
         <RadioButton
             android:id="@+id/moonG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="2.4G" />
+            android:text="@string/g_2" />
 
         <RadioButton
             android:id="@+id/venusG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="0.9G" />
+            android:text="@string/g_0.9" />
 
     </RadioGroup>
 
@@ -51,6 +51,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="nextQuestion"
-        android:text="Final Answer" />
+        android:text="@string/final_answer" />
 
 </LinearLayout>

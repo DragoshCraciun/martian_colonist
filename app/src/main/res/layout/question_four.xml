@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How many atmospheres of pressure are on Mars?" />
+        android:text="@string/question_four" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -22,28 +22,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="0.006 Atm" />
+            android:text="@string/atm_0" />
 
         <RadioButton
             android:id="@+id/venusAtm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="90 Atm" />
+            android:text="@string/atm_90" />
 
         <RadioButton
             android:id="@+id/earthAtm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="1 Atm" />
+            android:text="@string/atm_1" />
 
         <RadioButton
             android:id="@+id/TitanAtm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="1.45 Atm" />
+            android:text="@string/atm_1.4" />
 
     </RadioGroup>
 
@@ -51,6 +51,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="nextQuestion"
-        android:text="Final Answer" />
+        android:text="@string/final_answer" />
 
 </LinearLayout>

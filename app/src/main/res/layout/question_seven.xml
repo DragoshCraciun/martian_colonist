@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Who are the Greek Gods associated with this planets in ancient Roman religion and myth?" />
+        android:text="@string/question_seven" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -20,13 +20,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mars:" />
+            android:text="@string/mars" />
 
         <EditText
             android:id="@+id/marsGod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Good of War"
+            android:hint="@string/mars_hint"
             android:inputType="textPersonName" />
 
     </LinearLayout>
@@ -39,13 +39,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Venus:" />
+            android:text="@string/venus" />
 
         <EditText
             android:id="@+id/venusGod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Goddess of Love"
+            android:hint="@string/venus_hint"
             android:inputType="textPersonName" />
 
     </LinearLayout>
@@ -58,13 +58,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jupiter:" />
+            android:text="@string/jupiter" />
 
         <EditText
             android:id="@+id/jupiterGod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="God of Thunder"
+            android:hint="@string/jupiter_hint"
             android:inputType="textPersonName" />
 
     </LinearLayout>
@@ -77,13 +77,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Earth:" />
+            android:text="@string/earth" />
 
         <EditText
             android:id="@+id/earthGod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Goddess of Earth"
+            android:hint="@string/earth_hint"
             android:inputType="textPersonName" />
 
     </LinearLayout>
@@ -92,6 +92,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="nextQuestion"
-        android:text="Final Answer" />
+        android:text="@string/final_answer" />
 
 </LinearLayout>

@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.galacticcoders.whowantstobeamartiancolonist.ResultActivity">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context="com.galacticcoders.whowantstobeamartiancolonist.ResultActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="The score is:" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/your_score" />
 
-    <TextView
-        android:id="@+id/correct_answers_score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+<TextView
+    android:id="@+id/correct_answers_score"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="" />
 
-    <TextView
-        android:id="@+id/wrong_answers_score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="The score is:" />
+<TextView
+    android:id="@+id/wrong_answers_score"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="next"
-        android:text="NEXT" />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="next"
+    android:text="@string/next" />
 
 </LinearLayout>

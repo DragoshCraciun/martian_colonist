@@ -1,3 +1,82 @@
 <resources>
     <string name="app_name">Who Wants To Be A Martian Colonist</string>
+    <string name="welcome">Welcome to the quiz:</string>
+    <string name="next">Next</string>
+    <string name="final_answer">Yes, this is my final answer!</string>
+    <string name="your_score">Your score is:</string>
+
+    // Strings for question one
+    <string name="question_one">What is the lightest element in the universe?</string>
+    <string name="hydrogen">Hydrogen</string>
+    <string name="helium">Helium</string>
+    <string name="nitrogen">Nitrogen</string>
+    <string name="oxygen">Oxygen</string>
+
+    // Strings for question two
+    <string name="question_two">How long is a day on Mars?</string>
+    <string name="day_1">1d 0h 40m</string>
+    <string name="day_116">116d 18h 0m</string>
+    <string name="day_58">58d 15h 30</string>
+    <string name="day_0">0d 9h 56m</string>
+
+    // Strings for question three
+    <string name="question_three">What is mars atmosphere made of?</string>
+    <string name="argon">Argon</string>
+    <string name="carbon_dioxide">Carbon dioxide</string>
+    <string name="methane">Methane</string>
+    <string name="ammonia">Ammonia</string>
+
+    // Strings for question four
+    <string name="question_four">How many atmospheres of pressure are on Mars?</string>
+    <string name="atm_0">0.006 Atm</string>
+    <string name="atm_90">90 Atm</string>
+    <string name="atm_1">1 Atm</string>
+    <string name="atm_1.4">1.45 Atm</string>
+
+    // Strings for question five
+    <string name="question_five">How strong is the gravity on Mars?</string>
+    <string name="g_0">0.376G</string>
+    <string name="g_1">1G</string>
+    <string name="g_2">2.4G</string>
+    <string name="g_0.9">0.9G</string>
+
+    // Strings for question six
+    <string name="question_six">What is the distance between Earth and Mars in Astronomical Units?</string>
+    <string name="au_.5">0.52 AU</string>
+    <string name="au_.2">0.28 AU</string>
+    <string name="au_4">4.2 AU</string>
+    <string name="au_9">9.7 AU</string>
+
+    // Strings for question seven
+    <string name="question_seven">Who are the Greek Gods associated with this planets in ancient Roman religion and myth?</string>
+    <string name="mars">Mars:</string>
+    <string name="mars_hint">God of War</string>
+    <string name="venus">Venus:</string>
+    <string name="venus_hint">Goddess of Love</string>
+    <string name="jupiter">Jupiter:</string>
+    <string name="jupiter_hint">God of Thunder</string>
+    <string name="earth">Earth:</string>
+    <string name="earth_hint">Goddess of Earth</string>
+
+    // Strings for question eight
+    <string name="question_eight">Which of these are Mars moons?</string>
+    <string name="phobos">Phobos</string>
+    <string name="deimos">Deimos</string>
+    <string name="callisto">Callisto</string>
+    <string name="titan">Titan</string>
+
+    // Strings for question nine
+    <string name="question_nine">What is the surface temperature on Mars?</string>
+    <string name="minus_153">-153 to 20&#x2103;</string>
+    <string name="plus_462">462&#x2103;</string>
+    <string name="minus_88">-88&#x2103; to 58&#x2103;</string>
+    <string name="minus_173">-173&#x2103; to 427&#x2103;</string>
+
+    // Strings for question ten
+    <string name="question_ten">How long is a year on Mars?</string>
+    <string name="day_687">687 days</string>
+    <string name="day_225">225 days</string>
+    <string name="day_4333">4,333 days</string>
+    <string name="day_88">88 days</string>
+
 </resources>

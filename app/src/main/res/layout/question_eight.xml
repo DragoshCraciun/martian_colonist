@@ -10,40 +10,40 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Which of these are Mars moons?" />
+        android:text="@string/question_eight" />
 
     <CheckBox
         android:id="@+id/phobos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onCheckboxClick"
-        android:text="Phobos" />
+        android:text="@string/phobos" />
 
     <CheckBox
         android:id="@+id/deimos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onCheckboxClick"
-        android:text="Deimos" />
+        android:text="@string/deimos" />
 
     <CheckBox
         android:id="@+id/callisto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onCheckboxClick"
-        android:text="Callisto" />
+        android:text="@string/callisto" />
 
     <CheckBox
         android:id="@+id/titan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onCheckboxClick"
-        android:text="Titan" />
+        android:text="@string/titan" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="nextQuestion"
-        android:text="Final Answer" />
+        android:text="@string/final_answer" />
 
 </LinearLayout>
