@@ -8,4 +8,53 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:background">@drawable/button_bg</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+    </style>
+
+    <style name="Play" parent="Button">
+        <item name="android:text">@string/play</item>
+        <item name="android:onClick">next</item>
+    </style>
+
+    <style name="NextQuestion" parent="Button">
+        <item name="android:text">@string/final_answer</item>
+        <item name="android:onClick">nextQuestion</item>
+    </style>
+
+    <style name="Question">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/question_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/question_one</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+    </style>
+
+    <style name="Radio">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:onClick">onRadioButtonClick</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+    </style>
+
+    <style name="AnswerLeft" parent="Radio">
+        <item name="android:background">@drawable/answer_left_bg</item>
+    </style>
+
+    <style name="AnswerRight" parent="Radio">
+        <item name="android:background">@drawable/answer_right_bg</item>
+    </style>
+
 </resources>
