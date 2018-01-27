@@ -28,6 +28,6 @@ tools:context="com.galacticcoders.whowantstobeamartiancolonist.ResultActivity">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:onClick="next"
-    android:text="@string/next" />
+    android:text="@string/play" />
 
 </LinearLayout>
