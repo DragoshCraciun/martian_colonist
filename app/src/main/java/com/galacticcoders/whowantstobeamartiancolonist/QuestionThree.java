@@ -20,7 +20,7 @@ public class QuestionThree extends AppCompatActivity {
         setContentView(R.layout.question_three);
     }
 
-    public void onCheckboxClick(View view) {
+    public void onRadioButtonClick(View view) {
         // Is the box now checked?
         boolean checked = ((CheckBox) view).isChecked();
 

@@ -1,49 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionEight">
+    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionThree">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/start_quizz_bg" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/question"
+        style="@style/Question"
         android:text="@string/question_eight" />
 
-    <CheckBox
-        android:id="@+id/phobos"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onCheckboxClick"
-        android:text="@string/phobos" />
+        android:layout_below="@id/question"
+        android:orientation="vertical">
 
-    <CheckBox
-        android:id="@+id/deimos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onCheckboxClick"
-        android:text="@string/deimos" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
 
-    <CheckBox
-        android:id="@+id/callisto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onCheckboxClick"
-        android:text="@string/callisto" />
+            <CheckBox
+                android:id="@+id/phobos"
+                style="@style/AnswerLeft"
+                android:layout_weight="1"
+                android:text="@string/phobos" />
 
-    <CheckBox
-        android:id="@+id/titan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onCheckboxClick"
-        android:text="@string/titan" />
+            <CheckBox
+                android:id="@+id/deimos"
+                style="@style/AnswerRight"
+                android:layout_weight="1"
+                android:text="@string/deimos" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="nextQuestion"
-        android:text="@string/final_answer" />
+        </LinearLayout>
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/callisto"
+                style="@style/AnswerLeft"
+                android:layout_weight="1"
+                android:text="@string/callisto" />
+
+            <CheckBox
+                android:id="@+id/titan"
+                style="@style/AnswerRight"
+                android:layout_weight="1"
+                android:text="@string/titan" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button style="@style/NextQuestion" />
+
+</RelativeLayout>
