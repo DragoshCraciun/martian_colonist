@@ -27,7 +27,6 @@ public class QuestionOne extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // RadioGroup objects for clearCheck()
-
         RadioGroup rg_1 = (RadioGroup) findViewById(R.id.rg_1);
         RadioGroup rg_2 = (RadioGroup) findViewById(R.id.rg_2);
 

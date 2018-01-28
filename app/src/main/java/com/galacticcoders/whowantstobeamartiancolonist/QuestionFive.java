@@ -41,7 +41,7 @@ public class QuestionFive extends AppCompatActivity {
                     MainActivity.wrongAnswers++;
                 }
                 break;
-            case R.id.moonG:
+            case R.id.jupiterG:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();

@@ -13,10 +13,10 @@
 
     // Strings for question two
     <string name="question_two">How long is a day on Mars?</string>
-    <string name="day_1">1d 0h 40m</string>
-    <string name="day_116">116d 18h 0m</string>
-    <string name="day_58">58d 15h 30</string>
-    <string name="day_0">0d 9h 56m</string>
+    <string name="day_mars">1d 0h 40m</string>
+    <string name="day_venus">116d 18h 0m</string>
+    <string name="day_mercury">58d 15h 30</string>
+    <string name="day_jupiter">0d 9h 56m</string>
 
     // Strings for question three
     <string name="question_three">What is mars atmosphere made of?</string>
@@ -27,24 +27,24 @@
 
     // Strings for question four
     <string name="question_four">How many atmospheres of pressure are on Mars?</string>
-    <string name="atm_0">0.006 Atm</string>
-    <string name="atm_90">90 Atm</string>
-    <string name="atm_1">1 Atm</string>
-    <string name="atm_1.4">1.45 Atm</string>
+    <string name="atm_mars">0.006 Atm</string>
+    <string name="atm_venus">90 Atm</string>
+    <string name="atm_earth">1 Atm</string>
+    <string name="atm_titan">1.45 Atm</string>
 
     // Strings for question five
     <string name="question_five">How strong is the gravity on Mars?</string>
-    <string name="g_0">0.376G</string>
-    <string name="g_1">1G</string>
-    <string name="g_2">2.4G</string>
-    <string name="g_0.9">0.9G</string>
+    <string name="g_mars">0.376G</string>
+    <string name="g_earth">1G</string>
+    <string name="g_jupiter">2.4G</string>
+    <string name="g_venus">0.9G</string>
 
     // Strings for question six
     <string name="question_six">What is the distance between Earth and Mars in Astronomical Units?</string>
-    <string name="au_.5">0.52 AU</string>
-    <string name="au_.2">0.28 AU</string>
-    <string name="au_4">4.2 AU</string>
-    <string name="au_9">9.7 AU</string>
+    <string name="au_mars">0.52 AU</string>
+    <string name="au_venus">0.28 AU</string>
+    <string name="au_jupiter">4.2 AU</string>
+    <string name="au_saturn">9.7 AU</string>
 
     // Strings for question seven
     <string name="question_seven">Who are the Greek Gods associated with this planets in ancient Roman religion and myth?</string>
@@ -66,16 +66,16 @@
 
     // Strings for question nine
     <string name="question_nine">What is the surface temperature on Mars?</string>
-    <string name="minus_153">-153 to 20&#x2103;</string>
-    <string name="plus_462">462&#x2103;</string>
-    <string name="minus_88">-88&#x2103; to 58&#x2103;</string>
-    <string name="minus_173">-173&#x2103; to 427&#x2103;</string>
+    <string name="temp_mars">-153 to 20&#x2103;</string>
+    <string name="temp_venus">462&#x2103;</string>
+    <string name="temp_earth">-88&#x2103; to 58&#x2103;</string>
+    <string name="temp_mercury">-173&#x2103; to 427&#x2103;</string>
 
     // Strings for question ten
     <string name="question_ten">How long is a year on Mars?</string>
-    <string name="day_687">687 days</string>
-    <string name="day_225">225 days</string>
-    <string name="day_4333">4,333 days</string>
-    <string name="day_88">88 days</string>
+    <string name="year_mars">687 days</string>
+    <string name="year_venus">225 days</string>
+    <string name="year_jupiter">4,333 days</string>
+    <string name="year_mercury">88 days</string>
 
 </resources>

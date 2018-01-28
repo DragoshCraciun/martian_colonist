@@ -22,28 +22,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/g_0" />
+            android:text="@string/g_mars" />
 
         <RadioButton
             android:id="@+id/earthG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/g_1" />
+            android:text="@string/g_earth" />
 
         <RadioButton
-            android:id="@+id/moonG"
+            android:id="@+id/jupiterG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/g_2" />
+            android:text="@string/g_jupiter" />
 
         <RadioButton
             android:id="@+id/venusG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/g_0.9" />
+            android:text="@string/g_venus" />
 
     </RadioGroup>
 

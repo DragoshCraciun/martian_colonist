@@ -22,28 +22,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/minus_153" />
+            android:text="@string/temp_mars" />
 
         <RadioButton
             android:id="@+id/venusTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/plus_462" />
+            android:text="@string/temp_venus" />
 
         <RadioButton
             android:id="@+id/earthTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/minus_88" />
+            android:text="@string/temp_earth" />
 
         <RadioButton
             android:id="@+id/mercuryTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/minus_173" />
+            android:text="@string/temp_mercury" />
 
     </RadioGroup>
 

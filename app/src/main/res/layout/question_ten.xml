@@ -22,28 +22,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/day_687" />
+            android:text="@string/year_mars" />
 
         <RadioButton
             android:id="@+id/venusYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/day_225" />
+            android:text="@string/year_venus" />
 
         <RadioButton
             android:id="@+id/jupiterYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/day_4333" />
+            android:text="@string/year_jupiter" />
 
         <RadioButton
             android:id="@+id/mercuryYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClick"
-            android:text="@string/day_88" />
+            android:text="@string/year_mercury" />
 
     </RadioGroup>
 
