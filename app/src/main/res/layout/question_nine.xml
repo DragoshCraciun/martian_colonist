@@ -1,56 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionNine">
+    tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionOne">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/start_quizz_bg" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/question_nine" />
+        android:id="@+id/question"
+        style="@style/Question"
+        android:text="@string/question_nine"/>
 
     <RadioGroup
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_below="@id/question">
 
-        <RadioButton
-            android:id="@+id/marsTemp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClick"
-            android:text="@string/temp_mars" />
+        <RadioGroup
+            android:id="@+id/rg_1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/venusTemp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClick"
-            android:text="@string/temp_venus" />
+            <RadioButton
+                android:id="@+id/marsTemp"
+                style="@style/AnswerLeft"
+                android:layout_weight="1"
+                android:text="@string/temp_mars" />
 
-        <RadioButton
-            android:id="@+id/earthTemp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClick"
-            android:text="@string/temp_earth" />
+            <RadioButton
+                android:id="@+id/venusTemp"
+                style="@style/AnswerRight"
+                android:layout_weight="1"
+                android:text="@string/temp_venus" />
 
-        <RadioButton
-            android:id="@+id/mercuryTemp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClick"
-            android:text="@string/temp_mercury" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rg_2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/earthTemp"
+                style="@style/AnswerLeft"
+                android:layout_weight="1"
+                android:text="@string/temp_earth" />
+
+            <RadioButton
+                android:id="@+id/mercuryTemp"
+                style="@style/AnswerRight"
+                android:layout_weight="1"
+                android:text="@string/temp_mercury" />
+
+        </RadioGroup>
 
     </RadioGroup>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="nextQuestion"
-        android:text="@string/final_answer" />
+    <Button style="@style/NextQuestion" />
 
-</LinearLayout>
+</RelativeLayout>

@@ -8,6 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class QuestionFive extends AppCompatActivity {
@@ -25,6 +26,10 @@ public class QuestionFive extends AppCompatActivity {
         // Is the box now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
+        // RadioGroup objects for clearCheck()
+        RadioGroup rg_1 = (RadioGroup) findViewById(R.id.rg_1);
+        RadioGroup rg_2 = (RadioGroup) findViewById(R.id.rg_2);
+
         // Check which checkbox was clicked
         switch (view.getId()) {
             case R.id.marsG:
@@ -32,6 +37,7 @@ public class QuestionFive extends AppCompatActivity {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Right answer!", Toast.LENGTH_SHORT).show();
                     MainActivity.correctAnswers++;
+                    rg_2.clearCheck();
                 }
                 break;
             case R.id.earthG:
@@ -39,6 +45,7 @@ public class QuestionFive extends AppCompatActivity {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
                     MainActivity.wrongAnswers++;
+                    rg_2.clearCheck();
                 }
                 break;
             case R.id.jupiterG:
@@ -46,6 +53,7 @@ public class QuestionFive extends AppCompatActivity {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
                     MainActivity.wrongAnswers++;
+                    rg_1.clearCheck();
                 }
                 break;
             case R.id.venusG:
@@ -53,6 +61,7 @@ public class QuestionFive extends AppCompatActivity {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
                     MainActivity.wrongAnswers++;
+                    rg_1.clearCheck();
                 }
                 break;
         }
