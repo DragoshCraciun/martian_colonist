@@ -47,15 +47,11 @@
     <string name="au_saturn">9.7 AU</string>
 
     // Strings for question seven
-    <string name="question_seven">Who are the Greek Gods associated with this planets in ancient Roman religion and myth?</string>
-    <string name="mars">Mars:</string>
-    <string name="mars_hint">God of War</string>
-    <string name="venus">Venus:</string>
-    <string name="venus_hint">Goddess of Love</string>
-    <string name="jupiter">Jupiter:</string>
-    <string name="jupiter_hint">God of Thunder</string>
-    <string name="earth">Earth:</string>
-    <string name="earth_hint">Goddess of Earth</string>
+    <string name="question_seven">Which are the planets associated with these \ngreek gods in ancient roman religion and myth?</string>
+    <string name="mars_hint">Ares</string>
+    <string name="venus_hint">Aphrodite</string>
+    <string name="jupiter_hint">Zeus</string>
+    <string name="neptune_hint">Poseidon</string>
 
     // Strings for question eight
     <string name="question_eight">Which of these are Mars moons?</string>

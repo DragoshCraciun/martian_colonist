@@ -24,25 +24,25 @@ public class QuestionSeven extends AppCompatActivity {
     public void nextQuestion(View view) {
 
         // Getting string for user input of Mars God.
-        String ares = "ARES";
+        String ares = "MARS";
         EditText marsGod = (EditText) findViewById(R.id.marsGod);
         String marsGodAnswer = marsGod.getText().toString();
         marsGodAnswer = marsGodAnswer.toUpperCase();
 
         // Getting string for user input of Mars God.
-        String aphrodite = "APHRODITE";
+        String aphrodite = "VENUS";
         EditText venusGod = (EditText) findViewById(R.id.venusGod);
         String venusGodAnswer = marsGod.getText().toString();
         venusGodAnswer = venusGodAnswer.toUpperCase();
 
         // Getting string for user input of Mars God.
-        String zeus = "ZEUS";
+        String zeus = "JUPITER";
         EditText jupiterGod = (EditText) findViewById(R.id.jupiterGod);
         String jupiterGodAnswer = jupiterGod.getText().toString();
         jupiterGodAnswer = jupiterGodAnswer.toUpperCase();
 
         // Getting string for user input of Mars God.
-        String gaia = "GAIA";
+        String gaia = "NEPTUNE";
         EditText earthGod = (EditText) findViewById(R.id.earthGod);
         String earthGodAnswer = earthGod.getText().toString();
         earthGodAnswer = earthGodAnswer.toUpperCase();
