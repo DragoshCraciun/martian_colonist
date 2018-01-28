@@ -14,7 +14,7 @@
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_marginBottom">24dp</item>
-        <item name="android:background">@drawable/button_bg</item>
+        <item name="android:background">@drawable/btn_sel_bg</item>
         <item name="android:textColor">@color/colorPrimaryText</item>
     </style>
 
@@ -33,7 +33,7 @@
         <item name="android:layout_height">50dp</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_centerVertical">true</item>
-        <item name="android:background">@drawable/question_bg</item>
+        <item name="android:background">@drawable/q_bg</item>
         <item name="android:gravity">center</item>
         <item name="android:text">@string/question_one</item>
         <item name="android:textAlignment">center</item>
@@ -50,11 +50,11 @@
     </style>
 
     <style name="AnswerLeft" parent="Radio">
-        <item name="android:background">@drawable/answer_left_bg</item>
+        <item name="android:background">@drawable/a_sel_l_bg</item>
     </style>
 
     <style name="AnswerRight" parent="Radio">
-        <item name="android:background">@drawable/answer_right_bg</item>
+        <item name="android:background">@drawable/a_sel_r_bg</item>
     </style>
 
 </resources>
