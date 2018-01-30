@@ -21,7 +21,7 @@ public class QuestionTwo extends AppCompatActivity {
         setContentView(R.layout.question_two);
     }
 
-    public void onRadioButtonClick(View view) {
+    public void onAnswerClick(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 

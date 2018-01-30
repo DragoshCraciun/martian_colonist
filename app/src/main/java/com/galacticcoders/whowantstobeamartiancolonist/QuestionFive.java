@@ -22,7 +22,7 @@ public class QuestionFive extends AppCompatActivity {
         setContentView(R.layout.question_five);
     }
 
-    public void onRadioButtonClick(View view) {
+    public void onAnswerClick(View view) {
         // Is the box now checked?
         boolean checked = ((RadioButton) view).isChecked();
 

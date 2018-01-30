@@ -21,7 +21,7 @@ public class QuestionSeven extends AppCompatActivity {
         setContentView(R.layout.question_seven);
     }
 
-    public void onRadioButtonClick(View view) {
+    public void onAnswerClick(View view) {
 
         // Getting string for user input of Mars God.
         String ares = "MARS";
@@ -94,7 +94,7 @@ public class QuestionSeven extends AppCompatActivity {
 
     // Intent to move to the next question
     public void nextQuestion(View view) {
-        Intent nextQuestion = new Intent(this, QuestionFour.class);
+        Intent nextQuestion = new Intent(this, QuestionEight.class);
         startActivity(nextQuestion);
 
     }
