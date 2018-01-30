@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context="com.galacticcoders.whowantstobeamartiancolonist.ResultActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.galacticcoders.whowantstobeamartiancolonist.ResultActivity">
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/your_score" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wwtbamc_bg" />
 
-<TextView
-    android:id="@+id/correct_answers_score"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="" />
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/wwtbamc_logo" />
 
-<TextView
-    android:id="@+id/wrong_answers_score"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="" />
+    <LinearLayout
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:onClick="next"
-    android:text="@string/play" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/correct_answers_score"
+            style="@style/Score" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

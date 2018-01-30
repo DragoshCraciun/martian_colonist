@@ -2,7 +2,7 @@
     <string name="app_name">Who Wants To Be A Martian Colonist</string>
     <string name="play">Play</string>
     <string name="final_answer">Yes, this is my final answer!</string>
-    <string name="your_score">Your score is:</string>
+    <string name="your_score">You have \n90% chance \nof becoming a \nMartian Colonist!</string>
 
     // Strings for question one
     <string name="question_one">What is the lightest element in the universe?</string>

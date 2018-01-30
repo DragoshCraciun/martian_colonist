@@ -19,24 +19,12 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         displayCorrectScore(MainActivity.correctAnswers);
-        displayWrongScore(MainActivity.wrongAnswers);
     }
 
     // Display correct answers score
     public void displayCorrectScore(int score) {
         TextView correctScore = (TextView) findViewById(R.id.correct_answers_score);
-        correctScore.setText("Correct Score: " + String.valueOf(score));
-    }
-
-    // Display wrong answers score
-    public void displayWrongScore(int score) {
-        TextView wrongScore = (TextView) findViewById(R.id.wrong_answers_score);
-        wrongScore.setText("Wrong Score: " + String.valueOf(score));
-    }
-
-    public void next(View view) {
-        Intent nextQuestion = new Intent(this, QuestionOne.class);
-        startActivity(nextQuestion);
+        correctScore.setText("Congratulations! \nYou have \n" + String.valueOf(score*10) + "% chance \nof becoming a \nMartian Colonist!");
     }
 
     /**
