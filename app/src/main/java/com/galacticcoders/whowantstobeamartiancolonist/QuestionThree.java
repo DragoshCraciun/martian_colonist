@@ -11,6 +11,9 @@ import android.widget.Toast;
 
 public class QuestionThree extends AppCompatActivity {
 
+    public boolean rightAnswer1 = false;
+    public boolean rightAnswer2 = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,29 +32,27 @@ public class QuestionThree extends AppCompatActivity {
             case R.id.argon:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Right answer!", Toast.LENGTH_SHORT).show();
-                    MainActivity.correctAnswers++;
+                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    rightAnswer1 = true;
                 }
                 break;
             case R.id.carbon_dioxide:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Right answer!", Toast.LENGTH_SHORT).show();
-                    MainActivity.correctAnswers++;
+                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    rightAnswer2 = true;
                 }
                 break;
             case R.id.methane:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
-                    MainActivity.wrongAnswers++;
+                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.ammonia:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
-                    MainActivity.wrongAnswers++;
+                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
@@ -59,6 +60,10 @@ public class QuestionThree extends AppCompatActivity {
 
     // Intent to move to the next question
     public void nextQuestion(View view) {
+        // Add 1 to correctAnswers if the user answer is correct
+        if (rightAnswer1 && rightAnswer2) {
+            MainActivity.correctAnswers++;
+        }
         Intent nextQuestion = new Intent(this, QuestionFour.class);
         startActivity(nextQuestion);
 

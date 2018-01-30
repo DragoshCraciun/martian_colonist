@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class QuestionNine extends AppCompatActivity {
 
+    public boolean rightAnswer = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,32 +36,29 @@ public class QuestionNine extends AppCompatActivity {
             case R.id.marsTemp:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Right answer!", Toast.LENGTH_SHORT).show();
-                    MainActivity.correctAnswers++;
+                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    rightAnswer = true;
                     rg_2.clearCheck();
                 }
                 break;
             case R.id.venusTemp:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
-                    MainActivity.wrongAnswers++;
+                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
                     rg_2.clearCheck();
                 }
                 break;
             case R.id.earthTemp:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
-                    MainActivity.wrongAnswers++;
+                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
                     rg_1.clearCheck();
                 }
                 break;
             case R.id.mercuryTemp:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
-                    MainActivity.wrongAnswers++;
+                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
                     rg_1.clearCheck();
                 }
                 break;
@@ -68,6 +67,10 @@ public class QuestionNine extends AppCompatActivity {
 
     // Intent to move to the next question
     public void nextQuestion(View view) {
+        // Add 1 to correctAnswers if the user answer is correct
+        if (rightAnswer) {
+            MainActivity.correctAnswers++;
+        }
         Intent nextQuestion = new Intent(this, QuestionTen.class);
         startActivity(nextQuestion);
     }
