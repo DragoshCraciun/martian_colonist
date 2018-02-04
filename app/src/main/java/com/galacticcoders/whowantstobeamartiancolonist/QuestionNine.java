@@ -36,7 +36,7 @@ public class QuestionNine extends AppCompatActivity {
             case R.id.marsTemp:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     rightAnswer = true;
                     rg_2.clearCheck();
                 }
@@ -44,21 +44,21 @@ public class QuestionNine extends AppCompatActivity {
             case R.id.venusTemp:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     rg_2.clearCheck();
                 }
                 break;
             case R.id.earthTemp:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     rg_1.clearCheck();
                 }
                 break;
             case R.id.mercuryTemp:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     rg_1.clearCheck();
                 }
                 break;

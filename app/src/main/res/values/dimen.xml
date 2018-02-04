@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Logo dimen. -->
+    <dimen name="LogoWidth">200dp</dimen>
+    <dimen name="LogoHeight">200dp</dimen>
+    <dimen name="LogoMarginLeft">8dp</dimen>
+
+    <!-- Button dimen. -->
+    <dimen name="ButtonHeight">30dp</dimen>
+    <dimen name="ButtonMarginBottom">24dp</dimen>
+
+    <!-- Question dimen. -->
+    <dimen name="QuestionHeight">50dp</dimen>
+
+    <!-- Answer  dimen. -->
+    <dimen name="AnswerGroupHeight">40dp</dimen>
+    <dimen name="AnswerButtonWidth">0dp</dimen>
+    <dimen name="AnswerWeight">1</dimen>
+
+    <!-- Score dimen. -->
+    <dimen name="ScoreHeight">120dp</dimen>
+    <dimen name="ScoreMarginBottom">24dp</dimen>
+
+</resources>

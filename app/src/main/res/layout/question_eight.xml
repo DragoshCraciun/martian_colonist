@@ -2,62 +2,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    style="@style/RootView"
     tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionEight">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/start_quizz_bg" />
+    <ImageView style="@style/QuizBg" />
 
     <TextView
         android:id="@+id/question"
         style="@style/Question"
         android:text="@string/question_eight" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question"
-        android:orientation="vertical">
+    <LinearLayout style="@style/AnswerSection">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
+        <LinearLayout style="@style/AnswerGroup">
 
             <CheckBox
                 android:id="@+id/phobos"
                 style="@style/AnswerLeft"
-                android:layout_weight="1"
                 android:text="@string/phobos" />
 
             <CheckBox
                 android:id="@+id/deimos"
                 style="@style/AnswerRight"
-                android:layout_weight="1"
                 android:text="@string/deimos" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
+        <LinearLayout style="@style/AnswerGroup">
 
             <CheckBox
                 android:id="@+id/callisto"
                 style="@style/AnswerLeft"
-                android:layout_weight="1"
                 android:text="@string/callisto" />
 
             <CheckBox
                 android:id="@+id/titan"
                 style="@style/AnswerRight"
-                android:layout_weight="1"
                 android:text="@string/titan" />
 
         </LinearLayout>

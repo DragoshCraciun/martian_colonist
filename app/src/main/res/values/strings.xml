@@ -1,77 +1,81 @@
 <resources>
+    <!-- Main strings. -->
     <string name="app_name">Who Wants To Be A Martian Colonist</string>
     <string name="play">Play</string>
     <string name="final_answer">Yes, this is my final answer!</string>
     <string name="your_score">You have \n90% chance \nof becoming a \nMartian Colonist!</string>
 
-    // Strings for question one
+    <!-- Strings for question one -->
     <string name="question_one">What is the lightest element in the universe?</string>
     <string name="hydrogen">Hydrogen</string>
     <string name="helium">Helium</string>
     <string name="nitrogen">Nitrogen</string>
     <string name="oxygen">Oxygen</string>
 
-    // Strings for question two
+    <!-- Strings for question two -->
     <string name="question_two">How long is a day on Mars?</string>
     <string name="day_mars">1d 0h 40m</string>
     <string name="day_venus">116d 18h 0m</string>
     <string name="day_mercury">58d 15h 30</string>
     <string name="day_jupiter">0d 9h 56m</string>
 
-    // Strings for question three
+    <!-- Strings for question three -->
     <string name="question_three">What is mars atmosphere made of?</string>
     <string name="argon">Argon</string>
     <string name="carbon_dioxide">Carbon dioxide</string>
     <string name="methane">Methane</string>
     <string name="ammonia">Ammonia</string>
 
-    // Strings for question four
+    <!-- Strings for question four -->
     <string name="question_four">How many atmospheres of pressure are on Mars?</string>
     <string name="atm_mars">0.006 Atm</string>
     <string name="atm_venus">90 Atm</string>
     <string name="atm_earth">1 Atm</string>
     <string name="atm_titan">1.45 Atm</string>
 
-    // Strings for question five
+    <!-- Strings for question five -->
     <string name="question_five">How strong is the gravity on Mars?</string>
     <string name="g_mars">0.376G</string>
     <string name="g_earth">1G</string>
     <string name="g_jupiter">2.4G</string>
     <string name="g_venus">0.9G</string>
 
-    // Strings for question six
+    <!-- Strings for question six -->
     <string name="question_six">What is the distance between Earth and Mars in Astronomical Units?</string>
     <string name="au_mars">0.52 AU</string>
     <string name="au_venus">0.28 AU</string>
     <string name="au_jupiter">4.2 AU</string>
     <string name="au_saturn">9.7 AU</string>
 
-    // Strings for question seven
+    <!-- Strings for question seven -->
     <string name="question_seven">Which are the planets associated with these \ngreek gods in ancient roman religion and myth?</string>
     <string name="mars_hint">Ares</string>
     <string name="venus_hint">Aphrodite</string>
     <string name="jupiter_hint">Zeus</string>
     <string name="neptune_hint">Poseidon</string>
 
-    // Strings for question eight
+    <!-- Strings for question eight -->
     <string name="question_eight">Which of these are Mars moons?</string>
     <string name="phobos">Phobos</string>
     <string name="deimos">Deimos</string>
     <string name="callisto">Callisto</string>
     <string name="titan">Titan</string>
 
-    // Strings for question nine
+    <!-- Strings for question nine -->
     <string name="question_nine">What is the surface temperature on Mars?</string>
     <string name="temp_mars">-153 to 20&#x2103;</string>
     <string name="temp_venus">462&#x2103;</string>
     <string name="temp_earth">-88&#x2103; to 58&#x2103;</string>
     <string name="temp_mercury">-173&#x2103; to 427&#x2103;</string>
 
-    // Strings for question ten
+    <!-- Strings for question ten. -->
     <string name="question_ten">How long is a year on Mars?</string>
     <string name="year_mars">687 days</string>
     <string name="year_venus">225 days</string>
     <string name="year_jupiter">4,333 days</string>
     <string name="year_mercury">88 days</string>
+
+    <!-- Toast string. -->
+    <string name="FinalAnswer">Is this your final answer?</string>
 
 </resources>

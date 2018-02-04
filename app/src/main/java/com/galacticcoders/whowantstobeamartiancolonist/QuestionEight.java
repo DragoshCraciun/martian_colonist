@@ -32,27 +32,27 @@ public class QuestionEight extends AppCompatActivity {
             case R.id.phobos:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     rightAnswer1 = true;
                 }
                 break;
             case R.id.deimos:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     rightAnswer2 = true;
                 }
                 break;
             case R.id.callisto:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.titan:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                 }
                 break;
         }

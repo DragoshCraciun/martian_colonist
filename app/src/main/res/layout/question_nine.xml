@@ -2,63 +2,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    style="@style/RootView"
     tools:context="com.galacticcoders.whowantstobeamartiancolonist.QuestionNine">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/start_quizz_bg" />
+    <ImageView style="@style/QuizBg" />
 
     <TextView
         android:id="@+id/question"
         style="@style/Question"
-        android:text="@string/question_nine"/>
+        android:text="@string/question_nine" />
 
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question">
+    <RadioGroup style="@style/AnswerSection">
 
-        <RadioGroup
-            android:id="@+id/rg_1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
+        <RadioGroup style="@style/AnswerGroup">
 
             <RadioButton
                 android:id="@+id/marsTemp"
                 style="@style/AnswerLeft"
-                android:layout_weight="1"
                 android:text="@string/temp_mars" />
 
             <RadioButton
                 android:id="@+id/venusTemp"
                 style="@style/AnswerRight"
-                android:layout_weight="1"
                 android:text="@string/temp_venus" />
 
         </RadioGroup>
 
-        <RadioGroup
-            android:id="@+id/rg_2"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
+        <RadioGroup style="@style/AnswerGroup">
 
             <RadioButton
                 android:id="@+id/earthTemp"
                 style="@style/AnswerLeft"
-                android:layout_weight="1"
                 android:text="@string/temp_earth" />
 
             <RadioButton
                 android:id="@+id/mercuryTemp"
                 style="@style/AnswerRight"
-                android:layout_weight="1"
                 android:text="@string/temp_mercury" />
 
         </RadioGroup>

@@ -8,12 +8,45 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- RootView theme. -->
+    <style name="RootView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- Background theme. -->
+    <style name="Background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <!-- Main background theme. -->
+    <style name="MainBg" parent="Background">
+        <item name="android:src">@drawable/wwtbamc_bg</item>
+    </style>
+
+    <!-- Quiz background theme. -->
+    <style name="QuizBg" parent="Background">
+        <item name="android:src">@drawable/start_quizz_bg</item>
+    </style>
+
+    <!-- Logo theme. -->
+    <style name="Logo">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:src">@drawable/wwtbamc_logo</item>
+    </style>
+
+    <!-- Button theme. -->
     <style name="Button">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_height">@dimen/ButtonHeight</item>
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:layout_marginBottom">@dimen/ButtonMarginBottom</item>
         <item name="android:background">@drawable/btn_sel_bg</item>
         <item name="android:textColor">@color/colorPrimaryText</item>
     </style>
@@ -28,9 +61,10 @@
         <item name="android:onClick">nextQuestion</item>
     </style>
 
+    <!-- Question theme. -->
     <style name="Question">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_height">@dimen/QuestionHeight</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_centerVertical">true</item>
         <item name="android:background">@drawable/q_bg</item>
@@ -39,8 +73,22 @@
         <item name="android:textColor">@color/colorPrimaryText</item>
     </style>
 
-    <style name="Radio">
-        <item name="android:layout_width">0dp</item>
+    <!-- Answer group theme -->
+    <style name="AnswerSection">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/question</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="AnswerGroup" parent="AnswerSection">
+        <item name="android:layout_height">@dimen/AnswerGroupHeight</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!-- Answer button theme. -->
+    <style name="AnswerButton">
+        <item name="android:layout_width">@dimen/AnswerButtonWidth</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:button">@null</item>
         <item name="android:onClick">onAnswerClick</item>
@@ -48,25 +96,28 @@
         <item name="android:textColor">@color/colorSecondaryText</item>
     </style>
 
-    <style name="AnswerLeft" parent="Radio">
+    <style name="AnswerLeft" parent="AnswerButton">
         <item name="android:background">@drawable/a_sel_l_bg</item>
+        <item name="android:layout_weight">@dimen/AnswerWeight</item>
     </style>
 
-    <style name="AnswerRight" parent="Radio">
+    <style name="AnswerRight" parent="AnswerButton">
         <item name="android:background">@drawable/a_sel_r_bg</item>
+        <item name="android:layout_weight">@dimen/AnswerWeight</item>
     </style>
+
+    <!-- Score theme. -->
 
     <style name="Score">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">120dp</item>
-        <item name="android:layout_marginBottom">24dp</item>
-        <item name="android:layout_weight">5</item>
-        <item name="android:background">@drawable/score_bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ScoreHeight</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">@dimen/ScoreMarginBottom</item>
+        <item name="android:background">@drawable/btn_def</item>
         <item name="android:gravity">center</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/colorPrimaryText</item>
-        <item name="android:textSize">16sp</item>
     </style>
 
 </resources>

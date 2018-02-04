@@ -35,7 +35,7 @@ public class QuestionSix extends AppCompatActivity {
             case R.id.marsAU:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     rightAnswer = true;
                     rg_2.clearCheck();
                 }
@@ -43,21 +43,21 @@ public class QuestionSix extends AppCompatActivity {
             case R.id.venusAU:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     rg_2.clearCheck();
                 }
                 break;
             case R.id.jupiterAU:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     rg_1.clearCheck();
                 }
                 break;
             case R.id.saturnAU:
                 if (checked) {
                     // Show validity of the answer as a toast
-                    Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     rg_1.clearCheck();
                 }
                 break;

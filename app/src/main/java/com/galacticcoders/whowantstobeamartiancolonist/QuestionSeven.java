@@ -54,38 +54,38 @@ public class QuestionSeven extends AppCompatActivity {
 
         if (ares.equals(marsGodAnswer)) {
             // Show validity of the answer as a toast
-            Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
             rightAnswer = true;
         } else {
             // Show validity of the answer as a toast
-            Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
         }
 
         if (aphrodite.equals(venusGodAnswer)) {
             // Show validity of the answer as a toast
-            Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
             rightAnswer = true;
         } else {
             // Show validity of the answer as a toast
-            Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
         }
 
         if (zeus.equals(jupiterGodAnswer)) {
             // Show validity of the answer as a toast
-            Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
             rightAnswer = true;
         } else {
             // Show validity of the answer as a toast
-            Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
         }
 
         if (gaia.equals(earthGodAnswer)) {
             // Show validity of the answer as a toast
-            Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
             rightAnswer = true;
         } else {
             // Show validity of the answer as a toast
-            Toast.makeText(this, "Is this your final answer?", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
         }
 
     }
