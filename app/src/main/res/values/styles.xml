@@ -107,7 +107,6 @@
     </style>
 
     <!-- Score theme. -->
-
     <style name="Score">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ScoreHeight</item>
@@ -118,6 +117,7 @@
         <item name="android:textAlignment">center</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:onClick">next</item>
     </style>
 
 </resources>

@@ -27,6 +27,12 @@ public class ResultActivity extends AppCompatActivity {
         correctScore.setText("Congratulations! \nYou have \n" + String.valueOf(score*10) + "% chance \nof becoming a \nMartian Colonist!");
     }
 
+    public void next(View view) {
+        Intent nextQuestion = new Intent(this, MainActivity.class);
+        startActivity(nextQuestion);
+        MainActivity.correctAnswers = 0;
+    }
+
     /**
      * Prevents user to go to the previous question
      */

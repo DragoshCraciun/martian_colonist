@@ -9,7 +9,7 @@
 
     <ImageView style="@style/Logo" />
 
-    <TextView
+    <Button
         android:id="@+id/correct_answers_score"
         style="@style/Score" />
 
