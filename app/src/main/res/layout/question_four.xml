@@ -30,7 +30,9 @@
 
         </RadioGroup>
 
-        <RadioGroup style="@style/AnswerGroup">
+        <RadioGroup
+            android:id="@+id/rg_2"
+            style="@style/AnswerGroup">
 
             <RadioButton
                 android:id="@+id/earthAtm"
