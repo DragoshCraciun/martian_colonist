@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cine vrea să fie colonist martian</string>
+    <string name="play">Joacă</string>
+    <string name="final_answer">Da, acesta este răspunsul meu final</string>
+    <string name="question_one">"Care este cel mai usor element din univers?"</string>
+    <string name="hydrogen">Hidrogen</string>
+    <string name="helium">Heliu</string>
+    <string name="nitrogen">Azot</string>
+    <string name="oxygen">Oxigen</string>
+    <string name="question_two">Cât de lungă este o zi pe Marte?</string>
+    <string name="question_three">Din ce este compusă atmosfera pe Marte?</string>
+    <string name="carbon_dioxide">Dioxid de carbon</string>
+    <string name="methane">Metan</string>
+    <string name="ammonia">Amoniac</string>
+    <string name="question_four">Câte atmosfere de presiune sunt pe Marte?</string>
+    <string name="question_five">Cât de puternică este gravitatea pe Marte?</string>
+    <string name="question_six">Care este dinstanța dintre Pământ și Marte în Unități Astronomice?</string>
+    <string name="question_seven">Care sunt planetele asociate cu acești zei grecești în religia și mitul din roma antică?</string>
+    <string name="venus_hint">Afrodita</string>
+    <string name="question_eight">Care dintre astea sunt lunile lui Marte?</string>
+    <string name="question_nine">Care este termperatura la suprafață pe Marte?</string>
+    <string name="question_ten">Cât de lung este un an pe Marte?</string>
+    <string name="year_mars">687 zile</string>
+    <string name="year_venus">225 zile</string>
+    <string name="year_jupiter">4.333 zile</string>
+    <string name="year_mercury">88 zile</string>
+    <string name="FinalAnswer">Acesta este răspunsul tău final?</string>
+</resources>
