@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class QuestionFive extends AppCompatActivity {
 
-    public boolean rightAnswer = false;
+    public boolean correctAnswer = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class QuestionFive extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    rightAnswer = true;
+                    correctAnswer = true;
                     rg_2.clearCheck();
                 }
                 break;
@@ -69,7 +69,7 @@ public class QuestionFive extends AppCompatActivity {
     // Intent to move to the next question
     public void nextQuestion(View view) {
         // Add 1 to correctAnswers if the user answer is correct
-        if (rightAnswer) {
+        if (correctAnswer) {
             MainActivity.correctAnswers++;
         }
         Intent nextQuestion = new Intent(this, QuestionSix.class);

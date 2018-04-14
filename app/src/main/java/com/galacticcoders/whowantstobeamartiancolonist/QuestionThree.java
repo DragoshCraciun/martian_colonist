@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 public class QuestionThree extends AppCompatActivity {
 
-    public boolean rightAnswer1 = false;
-    public boolean rightAnswer2 = false;
+    public boolean correctAnswer1 = false;
+    public boolean correctAnswer2 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +33,14 @@ public class QuestionThree extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    rightAnswer1 = true;
+                    correctAnswer1 = true;
                 }
                 break;
             case R.id.carbon_dioxide:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    rightAnswer2 = true;
+                    correctAnswer2 = true;
                 }
                 break;
             case R.id.methane:
@@ -61,7 +61,7 @@ public class QuestionThree extends AppCompatActivity {
     // Intent to move to the next question
     public void nextQuestion(View view) {
         // Add 1 to correctAnswers if the user answer is correct
-        if (rightAnswer1 && rightAnswer2) {
+        if (correctAnswer1 && correctAnswer2) {
             MainActivity.correctAnswers++;
         }
         Intent nextQuestion = new Intent(this, QuestionFour.class);
