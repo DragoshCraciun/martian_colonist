@@ -72,22 +72,22 @@ public class QuestionSeven extends AppCompatActivity {
 
                     // Make background of correct answer to flash
                     EditText validAnswerMars = findViewById(R.id.marsGod);
-                    validAnswerMars.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                    validAnswerMars.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
                     AnimationDrawable flashMars = (AnimationDrawable) validAnswerMars.getBackground();
                     flashMars.start();
 
                     EditText validAnswerVenus = findViewById(R.id.venusGod);
-                    validAnswerVenus.setBackground(getResources().getDrawable(R.drawable.a_valid_r_bg));
+                    validAnswerVenus.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
                     AnimationDrawable flashVenus = (AnimationDrawable) validAnswerVenus.getBackground();
                     flashVenus.start();
 
                     EditText validAnswerJupiter = findViewById(R.id.jupiterGod);
-                    validAnswerJupiter.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                    validAnswerJupiter.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
                     AnimationDrawable flashJupiter = (AnimationDrawable) validAnswerJupiter.getBackground();
                     flashJupiter.start();
 
                     EditText validAnswerNeptune = findViewById(R.id.neptuneGod);
-                    validAnswerNeptune.setBackground(getResources().getDrawable(R.drawable.a_valid_r_bg));
+                    validAnswerNeptune.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
                     AnimationDrawable flashNeptune = (AnimationDrawable) validAnswerNeptune.getBackground();
                     flashNeptune.start();
 
@@ -103,7 +103,7 @@ public class QuestionSeven extends AppCompatActivity {
                     if (correctAnswer1) {
                         // Make background of correct answer to flash
                         EditText validAnswerMars = findViewById(R.id.marsGod);
-                        validAnswerMars.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                        validAnswerMars.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
                         AnimationDrawable flashMars = (AnimationDrawable) validAnswerMars.getBackground();
                         flashMars.start();
                     } else {
@@ -113,7 +113,7 @@ public class QuestionSeven extends AppCompatActivity {
                     if (correctAnswer2) {
                         // Make background of correct answer to flash
                         EditText validAnswerVenus = findViewById(R.id.venusGod);
-                        validAnswerVenus.setBackground(getResources().getDrawable(R.drawable.a_valid_r_bg));
+                        validAnswerVenus.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
                         AnimationDrawable flashVenus = (AnimationDrawable) validAnswerVenus.getBackground();
                         flashVenus.start();
                     } else {
@@ -123,7 +123,7 @@ public class QuestionSeven extends AppCompatActivity {
                     if (correctAnswer3) {
                         // Make background of correct answer to flash
                         EditText validAnswerJupiter = findViewById(R.id.jupiterGod);
-                        validAnswerJupiter.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                        validAnswerJupiter.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
                         AnimationDrawable flashJupiter= (AnimationDrawable) validAnswerJupiter.getBackground();
                         flashJupiter.start();
                     } else {
@@ -133,7 +133,7 @@ public class QuestionSeven extends AppCompatActivity {
                     if (correctAnswer4) {
                         // Make background of correct answer to flash
                         EditText validAnswerNeptune = findViewById(R.id.neptuneGod);
-                        validAnswerNeptune.setBackground(getResources().getDrawable(R.drawable.a_valid_r_bg));
+                        validAnswerNeptune.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
                         AnimationDrawable flashNeptune = (AnimationDrawable) validAnswerNeptune.getBackground();
                         flashNeptune.start();
                     } else {

@@ -95,12 +95,12 @@ public class QuestionEight extends AppCompatActivity {
 
                     // Make background of correct answer to flash
                     Button validAnswer1 = findViewById(R.id.phobos);
-                    validAnswer1.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                    validAnswer1.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
                     AnimationDrawable frameAnimation1 = (AnimationDrawable) validAnswer1.getBackground();
                     frameAnimation1.start();
 
                     Button validAnswer2 = findViewById(R.id.deimos);
-                    validAnswer2.setBackground(getResources().getDrawable(R.drawable.a_valid_r_bg));
+                    validAnswer2.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
                     AnimationDrawable frameAnimation2 = (AnimationDrawable) validAnswer2.getBackground();
                     frameAnimation2.start();
 
@@ -109,15 +109,29 @@ public class QuestionEight extends AppCompatActivity {
 
                 } else {
                     // Make background of correct answer to flash
-                    Button validAnswer1 = findViewById(R.id.phobos);
-                    validAnswer1.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
-                    AnimationDrawable frameAnimation1 = (AnimationDrawable) validAnswer1.getBackground();
-                    frameAnimation1.start();
 
-                    Button validAnswer2 = findViewById(R.id.deimos);
-                    validAnswer2.setBackground(getResources().getDrawable(R.drawable.a_valid_r_bg));
-                    AnimationDrawable frameAnimation2 = (AnimationDrawable) validAnswer2.getBackground();
-                    frameAnimation2.start();
+                    if (correctAnswer1) {
+                        Button validAnswer1 = findViewById(R.id.phobos);
+                        validAnswer1.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
+                        AnimationDrawable frameAnimation1 = (AnimationDrawable) validAnswer1.getBackground();
+                        frameAnimation1.start();
+                    } else {
+                        Button validAnswer1 = findViewById(R.id.phobos);
+                        validAnswer1.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                        AnimationDrawable frameAnimation1 = (AnimationDrawable) validAnswer1.getBackground();
+                        frameAnimation1.start();
+                    }
+                    if (correctAnswer2){
+                        Button validAnswer2 = findViewById(R.id.deimos);
+                        validAnswer2.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
+                        AnimationDrawable frameAnimation2 = (AnimationDrawable) validAnswer2.getBackground();
+                        frameAnimation2.start();
+                    } else {
+                        Button validAnswer2 = findViewById(R.id.deimos);
+                        validAnswer2.setBackground(getResources().getDrawable(R.drawable.a_valid_r_bg));
+                        AnimationDrawable frameAnimation2 = (AnimationDrawable) validAnswer2.getBackground();
+                        frameAnimation2.start();
+                    }
 
                     // Toast message for feedback
                     Toast.makeText(this, R.string.IncorrectAnswers, Toast.LENGTH_LONG).show();

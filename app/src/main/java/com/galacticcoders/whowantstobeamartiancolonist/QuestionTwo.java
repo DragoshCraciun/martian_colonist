@@ -103,7 +103,7 @@ public class QuestionTwo extends AppCompatActivity {
 
                     // Make background of correct answer to flash
                     Button validAnswer = findViewById(R.id.mars);
-                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
                     AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
                     frameAnimation.start();
 
