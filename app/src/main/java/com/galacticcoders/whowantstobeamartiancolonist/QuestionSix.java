@@ -21,6 +21,11 @@ public class QuestionSix extends AppCompatActivity {
     // boolean for validating answer.
     boolean checkAnswer = false;
 
+    // booleans for wrong answer disclosure
+    boolean venusAU = false;
+    boolean jupiterAU = false;
+    boolean saturnAU = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +47,7 @@ public class QuestionSix extends AppCompatActivity {
             case R.id.marsAU:
                 if (checked) {
                     // Show validity of the answer as a toast
+                    Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     selectAnswer = true;
                     correctAnswer = true;
@@ -51,7 +57,9 @@ public class QuestionSix extends AppCompatActivity {
             case R.id.venusAU:
                 if (checked) {
                     // Show validity of the answer as a toast
+                    Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    venusAU = true;
                     selectAnswer = true;
                     rg_2.clearCheck();
                 }
@@ -59,7 +67,9 @@ public class QuestionSix extends AppCompatActivity {
             case R.id.jupiterAU:
                 if (checked) {
                     // Show validity of the answer as a toast
+                    Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    jupiterAU = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -67,7 +77,9 @@ public class QuestionSix extends AppCompatActivity {
             case R.id.saturnAU:
                 if (checked) {
                     // Show validity of the answer as a toast
+                    Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    saturnAU = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -108,13 +120,16 @@ public class QuestionSix extends AppCompatActivity {
                     AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
                     frameAnimation.start();
 
-                    // Concatenated strings for the toast message
-                    String incorrectAnswer = getResources().getString(R.string.IncorrectAnswer);
-                    String marsAU = getResources().getString(R.string.au_mars);
-                    String toastAnswer = incorrectAnswer + " " + marsAU;
-
                     // Toast message for feedback
-                    Toast.makeText(this, toastAnswer, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();
+
+                // Feedback for wrong answer disclosure.
+                } if (venusAU) {
+                    Toast.makeText(this, R.string.venusAuFeedback, Toast.LENGTH_LONG).show();
+                } if (jupiterAU) {
+                    Toast.makeText(this, R.string.jupiterAuFeedback, Toast.LENGTH_LONG).show();
+                } if (saturnAU) {
+                    Toast.makeText(this, R.string.saturnAuFeedback, Toast.LENGTH_LONG).show();
                 }
             }
         } else {

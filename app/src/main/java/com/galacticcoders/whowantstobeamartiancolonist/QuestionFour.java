@@ -21,6 +21,11 @@ public class QuestionFour extends AppCompatActivity {
     // boolean for validating answer.
     boolean checkAnswer = false;
 
+    // booleans for wrong answer disclosure
+    boolean venusAtm = false;
+    boolean earthAtm = false;
+    boolean titanAtm = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +58,7 @@ public class QuestionFour extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    venusAtm = true;
                     selectAnswer = true;
                     rg_2.clearCheck();
                 }
@@ -61,6 +67,7 @@ public class QuestionFour extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    earthAtm = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -69,6 +76,7 @@ public class QuestionFour extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    titanAtm = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -109,13 +117,16 @@ public class QuestionFour extends AppCompatActivity {
                     AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
                     frameAnimation.start();
 
-                    // Concatenated strings for the toast message
-                    String incorrectAnswer = getResources().getString(R.string.IncorrectAnswer);
-                    String marsAtm = getResources().getString(R.string.atm_mars);
-                    String toastAnswer = incorrectAnswer + " " + marsAtm;
-
                     // Toast message for feedback
-                    Toast.makeText(this, toastAnswer, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();
+
+                // Feedback for wrong answer disclosure.
+                } if (venusAtm) {
+                    Toast.makeText(this, R.string.venusAtmFeedback, Toast.LENGTH_LONG).show();
+                } if (earthAtm) {
+                    Toast.makeText(this, R.string.earthAtmFeedback, Toast.LENGTH_LONG).show();
+                } if (titanAtm) {
+                    Toast.makeText(this, R.string.titanAtmFeedback, Toast.LENGTH_LONG).show();
                 }
             }
         } else {

@@ -21,6 +21,11 @@ public class QuestionTwo extends AppCompatActivity {
     // boolean for validating answer.
     boolean checkAnswer = false;
 
+    // booleans for wrong answer disclosure
+    boolean venus = false;
+    boolean mercury = false;
+    boolean jupiter = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +58,7 @@ public class QuestionTwo extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    venus = true;
                     selectAnswer = true;
                     rg_2.clearCheck();
                 }
@@ -61,6 +67,7 @@ public class QuestionTwo extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    mercury = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -69,6 +76,7 @@ public class QuestionTwo extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    jupiter = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -109,13 +117,16 @@ public class QuestionTwo extends AppCompatActivity {
                     AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
                     frameAnimation.start();
 
-                    // Concatenated strings for the toast message
-                    String incorrectAnswer = getResources().getString(R.string.IncorrectAnswer);
-                    String day_mars = getResources().getString(R.string.day_mars);
-                    String toastAnswer = incorrectAnswer + " " + day_mars;
-
                     // Toast message for feedback
-                    Toast.makeText(this, toastAnswer, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();
+
+                // Feedback for wrong answer disclosure.
+                } if (venus) {
+                Toast.makeText(this, R.string.venusFeedback, Toast.LENGTH_LONG).show();
+                } if (mercury) {
+                    Toast.makeText(this, R.string.mercuryFeedback, Toast.LENGTH_LONG).show();
+                } if (jupiter) {
+                    Toast.makeText(this, R.string.jupiterFeedback, Toast.LENGTH_LONG).show();
                 }
             }
         } else {

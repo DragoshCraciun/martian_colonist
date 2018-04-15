@@ -22,6 +22,11 @@ public class QuestionFive extends AppCompatActivity {
     // boolean for validating answer.
     boolean checkAnswer = false;
 
+    // booleans for wrong answer disclosure
+    boolean earthG = false;
+    boolean jupiterG = false;
+    boolean venusG = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +59,7 @@ public class QuestionFive extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    earthG = true;
                     selectAnswer = true;
                     rg_2.clearCheck();
                 }
@@ -62,6 +68,7 @@ public class QuestionFive extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    jupiterG = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -70,6 +77,7 @@ public class QuestionFive extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    venusG = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -110,13 +118,16 @@ public class QuestionFive extends AppCompatActivity {
                     AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
                     frameAnimation.start();
 
-                    // Concatenated strings for the toast message
-                    String incorrectAnswer = getResources().getString(R.string.IncorrectAnswer);
-                    String marsG = getResources().getString(R.string.g_mars);
-                    String toastAnswer = incorrectAnswer + " " + marsG;
-
                     // Toast message for feedback
-                    Toast.makeText(this, toastAnswer, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();
+
+                // Feedback for wrong answer disclosure.
+                } if (earthG) {
+                    Toast.makeText(this, R.string.earthGFeedback, Toast.LENGTH_LONG).show();
+                } if (jupiterG) {
+                    Toast.makeText(this, R.string.jupiterGFeedback, Toast.LENGTH_LONG).show();
+                } if (venusG) {
+                    Toast.makeText(this, R.string.venusGFeedback, Toast.LENGTH_LONG).show();
                 }
             }
         } else {

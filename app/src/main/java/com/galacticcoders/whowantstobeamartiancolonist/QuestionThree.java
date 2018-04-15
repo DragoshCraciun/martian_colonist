@@ -22,6 +22,10 @@ public class QuestionThree extends AppCompatActivity {
     // boolean for validating answer.
     boolean checkAnswer = false;
 
+    // booleans for wrong answer disclosure
+    boolean methane = false;
+    boolean ammonia = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +61,7 @@ public class QuestionThree extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    methane = true;
                     selectAnswer = true;
                 }
                 break;
@@ -64,6 +69,7 @@ public class QuestionThree extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    ammonia = true;
                     selectAnswer = true;
                 }
                 break;
@@ -115,6 +121,12 @@ public class QuestionThree extends AppCompatActivity {
 
                     // Toast message for feedback
                     Toast.makeText(this, R.string.IncorrectAnswers, Toast.LENGTH_LONG).show();
+
+                // Feedback for wrong answer disclosure.
+                } if (methane) {
+                    Toast.makeText(this, R.string.methaneFeedback, Toast.LENGTH_LONG).show();
+                } if (ammonia) {
+                    Toast.makeText(this, R.string.ammoniaFeedback, Toast.LENGTH_LONG).show();
                 }
             }
         } else {

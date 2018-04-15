@@ -21,6 +21,11 @@ public class QuestionNine extends AppCompatActivity {
     // boolean for validating answer.
     boolean checkAnswer = false;
 
+    // booleans for wrong answer disclosure
+    boolean venusTemp = false;
+    boolean earthTemp = false;
+    boolean mercuryTemp = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +58,7 @@ public class QuestionNine extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    venusTemp = true;
                     selectAnswer = true;
                     rg_2.clearCheck();
                 }
@@ -61,6 +67,7 @@ public class QuestionNine extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    earthTemp = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -69,6 +76,7 @@ public class QuestionNine extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    mercuryTemp = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -110,7 +118,15 @@ public class QuestionNine extends AppCompatActivity {
                     frameAnimation.start();
 
                     // Toast message for feedback
-                    Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();
+
+                // Feedback for wrong answer disclosure.
+                } if (venusTemp) {
+                    Toast.makeText(this, R.string.venusTempFeedback, Toast.LENGTH_LONG).show();
+                } if (earthTemp) {
+                    Toast.makeText(this, R.string.earthTempFeedback, Toast.LENGTH_LONG).show();
+                } if (mercuryTemp) {
+                    Toast.makeText(this, R.string.mercuryTempFeedback, Toast.LENGTH_LONG).show();
                 }
             }
         } else {

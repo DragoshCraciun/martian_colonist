@@ -26,12 +26,14 @@ public class ResultActivity extends AppCompatActivity {
 
         TextView correctScore = (TextView) findViewById(R.id.correct_answers_score);
 
-        if (score <= 3) {
-            correctScore.setText("Sorry! \nYou have only\n" + String.valueOf(score*10) + "% chance \nof becoming a \nMartian Colonist!");
-        } else if (score >= 4 && score <= 8) {
-            correctScore.setText("Congratulations! \nYou have a about\n" + String.valueOf(score*10) + "% chance \nof becoming a \nMartian Colonist!");
+        if (score <= 0) {
+            correctScore.setText("I am sorry kiddo! \nYou are not ready yet. \nless then " + String.valueOf(score*10) + "% chance \nof becoming \n Martian Colonist!");
+        } else if (score >= 2 && score <= 4) {
+            correctScore.setText("Almost there! \nYou have to try a bit harder. \nonly " + String.valueOf(score*10) + "% chance \nof becoming \nMartian Colonist!");
+        } else if (score >= 5 && score <= 8) {
+            correctScore.setText("Congratulations, major! \nYou are almost there. \nabout " + String.valueOf(score*10) + "% chance \nof becoming \nMartian Colonist!");
         } else {
-            correctScore.setText("Awesome! \nYou have a good\n" + String.valueOf(score*10) + "% chance \nof becoming a \nMartian Colonist!");
+            correctScore.setText("You are Awesome! \nSpace travel is in your dna. \na good " + String.valueOf(score*10) + "% chance \nof becoming \nMartian Colonist!");
         }
     }
 

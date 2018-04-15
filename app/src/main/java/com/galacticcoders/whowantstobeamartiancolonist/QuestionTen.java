@@ -21,6 +21,11 @@ public class QuestionTen extends AppCompatActivity {
     // boolean for validating answer.
     boolean checkAnswer = false;
 
+    // booleans for wrong answer disclosure
+    boolean venusYear = false;
+    boolean jupiterYear = false;
+    boolean mercuryYear = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +58,7 @@ public class QuestionTen extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    venusYear = true;
                     selectAnswer = true;
                     rg_2.clearCheck();
                 }
@@ -61,6 +67,7 @@ public class QuestionTen extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    jupiterYear = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -69,6 +76,7 @@ public class QuestionTen extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    mercuryYear = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -90,11 +98,11 @@ public class QuestionTen extends AppCompatActivity {
                 Button nextQuestion = findViewById(R.id.next_question);
                 nextQuestion.setText(R.string.results);
 
-                // Add 1 to correctAnswers if the user answer is correct
+                // Add 1 to correctAnswers if the user answer is correct.
                 if (correctAnswer) {
                     MainActivity.correctAnswers++;
 
-                    // Make background of correct answer to flash
+                    // Make background of correct answer to flash.
                     Button validAnswer = findViewById(R.id.marsYear);
                     validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
                     AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
@@ -102,19 +110,29 @@ public class QuestionTen extends AppCompatActivity {
 
                     // Toast message to congratulate
                     Toast.makeText(this, R.string.CorrectAnswer, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, R.string.Congratulations, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.quizOver, Toast.LENGTH_LONG).show();
 
                 } else {
-                    // Make background of correct answer to flash
+                    // Make background of correct answer to flash.
                     Button validAnswer = findViewById(R.id.marsYear);
                     validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
                     AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
                     frameAnimation.start();
 
-                    // Toast message for feedback
+                    // Toast message for feedback.
                     Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, R.string.Congratulations, Toast.LENGTH_LONG).show();
+
+                // Feedback for wrong answer disclosure.
+                } if (venusYear) {
+                    Toast.makeText(this, R.string.venusYearFeedback, Toast.LENGTH_LONG).show();
+                } if (jupiterYear) {
+                    Toast.makeText(this, R.string.jupiterYearFeedback, Toast.LENGTH_LONG).show();
+                } if (mercuryYear) {
+                    Toast.makeText(this, R.string.mercuryYearFeedback, Toast.LENGTH_LONG).show();
                 }
+
+                // Toast for announcing the quiz is over.
+                Toast.makeText(this, R.string.quizOver, Toast.LENGTH_LONG).show();
             }
         } else {
             Toast.makeText(this, R.string.SelectAnswer, Toast.LENGTH_SHORT).show();

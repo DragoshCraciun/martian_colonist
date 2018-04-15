@@ -17,7 +17,7 @@
     <string name="question_two">How long is a day on Mars?</string>
     <string name="day_mars">1d 0h 40m</string>
     <string name="day_venus">116d 18h 0m</string>
-    <string name="day_mercury">58d 15h 30</string>
+    <string name="day_mercury">58d 15h 30m</string>
     <string name="day_jupiter">0d 9h 56m</string>
 
     <!-- Strings for question three -->
@@ -87,10 +87,51 @@
     <string name="SelectAnswer">Please select an answer!</string>
     <string name="SelectAnswers">Please select two answers!</string>
     <string name="WriteAnswers">Please write your answers!</string>
-    <string name="CorrectAnswer">Great! Your answer is correct.</string>
-    <string name="CorrectAnswers">Great! Your answers are correct.</string>
-    <string name="IncorrectAnswer">Sorry! Your answer is incorrect.</string>
-    <string name="IncorrectAnswers">Sorry! One or more answers are incorrect.</string>
-    <string name="Congratulations">The quiz is now over.</string>
+    <string name="CorrectAnswer">Great, Your answer is correct.</string>
+    <string name="CorrectAnswers">Great, Your answers are correct.</string>
+    <string name="IncorrectAnswer">Sorry, Your answer is incorrect.</string>
+    <string name="IncorrectAnswers">Sorry, One or more answers are incorrect.</string>
+    <string name="quizOver">The quiz is now over.</string>
+
+    <!-- Toast wrong answer disclosure feedback. -->
+    <string name="heliumFeedback">Helium is the 2nd lightest element.</string>
+    <string name="nitrogenFeedback">Nitrogen is the 7th lightest element.</string>
+    <string name="oxygenFeedback">Oxygen is the 8th lightest element.</string>
+
+    <string name="venusFeedback">116d 18h 0m is a day on Venus.</string>
+    <string name="mercuryFeedback">58d 15h 30m is a day on Mercury.</string>
+    <string name="jupiterFeedback">0d 9h 56m is a day on Jupiter.</string>
+
+    <string name="methaneFeedback">Methane is found in atmosphere of Titan.</string>
+    <string name="ammoniaFeedback">Ammonia is found in atmosphere of Jupiter.</string>
+
+    <string name="venusAtmFeedback">90 Atm of pressure are on Venus.</string>
+    <string name="earthAtmFeedback">1 Atm of pressure is here on Earth.</string>
+    <string name="titanAtmFeedback">1.45 Atm of pressure are on Titan.</string>
+
+    <string name="earthGFeedback">1G strong is gravity here on Earth.</string>
+    <string name="jupiterGFeedback">2.4G strong is gravity on Jupiter.</string>
+    <string name="venusGFeedback">0.9G strong is gravity on on Venus.</string>
+
+    <string name="AuFeedback">1 AU = distance from Earth to Sun.</string>
+    <string name="venusAuFeedback">0.28 AU is from Earth to Venus.</string>
+    <string name="jupiterAuFeedback">4.2 AU is from Earth to Jupiter.</string>
+    <string name="saturnAuFeedback">9.7 AU is from Earth to Saturn.</string>
+
+    <string name="marsGodFeedback">Ares is associated with Mars.</string>
+    <string name="venusGodFeedback">Aphrodite is associate with Venus. </string>
+    <string name="jupiterGodFeedback">Zeus is associated with Jupiter.</string>
+    <string name="neptuneGodFeedback">Poseidon is associated with Neptune.</string>
+
+    <string name="callistoFeedback">Callisto is a moon of Jupiter.</string>
+    <string name="titanFeedback">Titan is a moon of Saturn.</string>
+
+    <string name="venusTempFeedback">462&#x2103; is the temperature on Venus.</string>
+    <string name="earthTempFeedback">-88&#x2103; to 58&#x2103; is on Earth.</string>
+    <string name="mercuryTempFeedback">-173&#x2103; to 427&#x2103; is on Mercury.</string>
+
+    <string name="venusYearFeedback">225 days is an year on Venus.</string>
+    <string name="jupiterYearFeedback">4,333 days is an year on Jupiter.</string>
+    <string name="mercuryYearFeedback">88 days is an year on Mercury.</string>
 
 </resources>

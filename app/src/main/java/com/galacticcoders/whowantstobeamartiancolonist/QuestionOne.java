@@ -23,6 +23,11 @@ public class QuestionOne extends AppCompatActivity {
     // boolean for validating answer.
     boolean checkAnswer = false;
 
+    // booleans for wrong answer disclosure
+    boolean helium = false;
+    boolean nitrogen = false;
+    boolean oxygen = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +60,7 @@ public class QuestionOne extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    helium = true;
                     selectAnswer = true;
                     rg_2.clearCheck();
                 }
@@ -63,6 +69,7 @@ public class QuestionOne extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    nitrogen = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -71,6 +78,7 @@ public class QuestionOne extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    oxygen = true;
                     selectAnswer = true;
                     rg_1.clearCheck();
                 }
@@ -112,7 +120,15 @@ public class QuestionOne extends AppCompatActivity {
                     frameAnimation.start();
 
                     // Toast message for feedback
-                    Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();
+
+                // Feedback for wrong answer disclosure.
+                } if (helium) {
+                    Toast.makeText(this, R.string.heliumFeedback, Toast.LENGTH_LONG).show();
+                } if (nitrogen) {
+                    Toast.makeText(this, R.string.nitrogenFeedback, Toast.LENGTH_LONG).show();
+                } if (oxygen) {
+                    Toast.makeText(this, R.string.oxygenFeedback, Toast.LENGTH_LONG).show();
                 }
             }
         } else {
