@@ -21,14 +21,14 @@
     <string name="day_jupiter">0d 9h 56m</string>
 
     <!-- Strings for question three -->
-    <string name="question_three">What is mars atmosphere made of?</string>
+    <string name="question_three">What are the two elements of which Mars atmosphere is made?</string>
     <string name="argon">Argon</string>
     <string name="carbon_dioxide">Carbon Dioxide</string>
     <string name="methane">Methane</string>
     <string name="ammonia">Ammonia</string>
 
     <!-- Strings for question four -->
-    <string name="question_four">How many atmospheres of pressure are on Mars?</string>
+    <string name="question_four">How many atmospheres of pressure \nare on Mars?</string>
     <string name="atm_mars">0.006 Atm</string>
     <string name="atm_venus">90 Atm</string>
     <string name="atm_earth">1 Atm</string>
@@ -42,14 +42,14 @@
     <string name="g_venus">0.9G</string>
 
     <!-- Strings for question six -->
-    <string name="question_six">What is the distance between Earth and Mars in Astronomical Units?</string>
+    <string name="question_six">What is the distance between \nEarth and Mars?</string>
     <string name="au_mars">0.52 AU</string>
     <string name="au_venus">0.28 AU</string>
     <string name="au_jupiter">4.2 AU</string>
     <string name="au_saturn">9.7 AU</string>
 
     <!-- Strings for question seven -->
-    <string name="question_seven">Which are the planets associated with these \ngreek gods in ancient roman religion and myth?</string>
+    <string name="question_seven">Which are the planets associated \nwith these greek gods?</string>
     <string name="mars_hint">Ares</string>
     <string name="venus_hint">Aphrodite</string>
     <string name="jupiter_hint">Zeus</string>
@@ -62,7 +62,7 @@
     <string name="neptune_poseidon">neptune</string>
 
     <!-- Strings for question eight -->
-    <string name="question_eight">Which of these are Mars moons?</string>
+    <string name="question_eight">Which of these are the two moons of Mars?</string>
     <string name="phobos">Phobos</string>
     <string name="deimos">Deimos</string>
     <string name="callisto">Callisto</string>
