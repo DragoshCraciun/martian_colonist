@@ -26,14 +26,42 @@ public class ResultActivity extends AppCompatActivity {
 
         TextView correctScore = (TextView) findViewById(R.id.correct_answers_score);
 
+        // Concatenating strings
+        String lowScore = getResources().getString(R.string.lowScore);
+        String averageScore = getResources().getString(R.string.averageScore);
+        String highScore = getResources().getString(R.string.highScore);
+        String bestScore = getResources().getString(R.string.bestScore);
+        String martianColonist = getResources().getString(R.string.martianColonist);
+
+        // String for low score result
+        String lowScoreResult = lowScore;
+        lowScoreResult += String.valueOf(score*10);
+        lowScoreResult += martianColonist;
+
+        // String for average score result
+        String averageScoreResult = averageScore;
+        averageScoreResult += String.valueOf(score*10);
+        averageScoreResult += martianColonist;
+
+        // String for high score result
+        String highScoreResult = highScore;
+        highScoreResult += String.valueOf(score*10);
+        highScoreResult += martianColonist;
+
+        // String for best score result
+        String bestScoreResult = bestScore;
+        bestScoreResult += String.valueOf(score*10);
+        bestScoreResult += martianColonist;
+
+        // Display score based on level
         if (score <= 0) {
-            correctScore.setText("I am sorry kiddo! \nYou are not ready yet. \nless then " + String.valueOf(score*10) + "% chance \nof becoming \n Martian Colonist!");
+            correctScore.setText(lowScoreResult);
         } else if (score >= 2 && score <= 4) {
-            correctScore.setText("Almost there! \nYou have to try a bit harder. \nonly " + String.valueOf(score*10) + "% chance \nof becoming \nMartian Colonist!");
+            correctScore.setText(averageScoreResult);
         } else if (score >= 5 && score <= 8) {
-            correctScore.setText("Congratulations, major! \nYou are almost there. \nabout " + String.valueOf(score*10) + "% chance \nof becoming \nMartian Colonist!");
+            correctScore.setText(highScoreResult);
         } else {
-            correctScore.setText("You are Awesome! \nSpace travel is in your dna. \na good " + String.valueOf(score*10) + "% chance \nof becoming \nMartian Colonist!");
+            correctScore.setText(bestScoreResult);
         }
     }
 

@@ -93,6 +93,12 @@
     <string name="IncorrectAnswers">Sorry, One or more answers are incorrect.</string>
     <string name="quizOver">The quiz is now over.</string>
 
+    <string name="lowScore">I am sorry kiddo! \nYou are not ready yet. \nless then\u00A0</string>
+    <string name="averageScore">Almost there! \nYou have to try a bit harder. \nonly\u00A0</string>
+    <string name="highScore">Congratulations, major! \nYou are almost there. \nabout\u00A0</string>
+    <string name="bestScore">You are Awesome! \nSpace travel is in your dna. \na good\u00A0</string>
+    <string name="martianColonist">% chance \nof becoming \n Martian Colonist!</string>
+
     <!-- Toast wrong answer disclosure feedback. -->
     <string name="heliumFeedback">Helium is the 2nd lightest element.</string>
     <string name="nitrogenFeedback">Nitrogen is the 7th lightest element.</string>
