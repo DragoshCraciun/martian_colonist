@@ -3,6 +3,8 @@
     <string name="app_name">Who Wants To Be A Martian Colonist</string>
     <string name="play">Play</string>
     <string name="final_answer">Yes, this is my final answer!</string>
+    <string name="next_question">Next Question</string>
+    <string name="results">Show me the score!</string>
 
     <!-- Strings for question one -->
     <string name="question_one">What is the lightest element in the universe?</string>
@@ -21,7 +23,7 @@
     <!-- Strings for question three -->
     <string name="question_three">What is mars atmosphere made of?</string>
     <string name="argon">Argon</string>
-    <string name="carbon_dioxide">Carbon dioxide</string>
+    <string name="carbon_dioxide">Carbon Dioxide</string>
     <string name="methane">Methane</string>
     <string name="ammonia">Ammonia</string>
 
@@ -53,6 +55,12 @@
     <string name="jupiter_hint">Zeus</string>
     <string name="neptune_hint">Poseidon</string>
 
+    <!-- String for revealing the answers question seven -->
+    <string name="mars_ares">mars</string>
+    <string name="venus_aphrodite">venus</string>
+    <string name="jupiter_zeus">jupiter</string>
+    <string name="neptune_poseidon">neptune</string>
+
     <!-- Strings for question eight -->
     <string name="question_eight">Which of these are Mars moons?</string>
     <string name="phobos">Phobos</string>
@@ -76,5 +84,13 @@
 
     <!-- Toast string. -->
     <string name="FinalAnswer">Is this your final answer?</string>
+    <string name="SelectAnswer">Please select an answer!</string>
+    <string name="SelectAnswers">Please select two answers!</string>
+    <string name="WriteAnswers">Please write your answers!</string>
+    <string name="CorrectAnswer">Great! Your answer is correct.</string>
+    <string name="CorrectAnswers">Great! Your answers are correct.</string>
+    <string name="IncorrectAnswer">Sorry! Your answer is incorrect.</string>
+    <string name="IncorrectAnswers">Sorry! One or more answers are incorrect.</string>
+    <string name="Congratulations">The quiz is now over.</string>
 
 </resources>

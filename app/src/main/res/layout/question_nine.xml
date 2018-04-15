@@ -14,7 +14,9 @@
 
     <RadioGroup style="@style/AnswerSection">
 
-        <RadioGroup style="@style/AnswerGroup">
+        <RadioGroup
+            android:id="@+id/rg_1"
+            style="@style/AnswerGroup">
 
             <RadioButton
                 android:id="@+id/marsTemp"
@@ -28,7 +30,9 @@
 
         </RadioGroup>
 
-        <RadioGroup style="@style/AnswerGroup">
+        <RadioGroup
+            android:id="@+id/rg_2"
+            style="@style/AnswerGroup">
 
             <RadioButton
                 android:id="@+id/earthTemp"
@@ -44,6 +48,8 @@
 
     </RadioGroup>
 
-    <Button style="@style/NextQuestion" />
+    <Button
+        android:id="@+id/next_question"
+        style="@style/NextQuestion" />
 
 </RelativeLayout>

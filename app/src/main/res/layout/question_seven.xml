@@ -20,7 +20,7 @@
                 android:id="@+id/marsGod"
                 style="@style/AnswerLeft"
                 android:hint="@string/mars_hint"
-                android:inputType="textPersonName" />
+                android:inputType="text" />
 
             <EditText
                 android:id="@+id/venusGod"
@@ -39,7 +39,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/earthGod"
+                android:id="@+id/neptuneGod"
                 style="@style/AnswerRight"
                 android:hint="@string/neptune_hint"
                 android:inputType="textPersonName" />
@@ -48,6 +48,8 @@
 
     </LinearLayout>
 
-    <Button style="@style/NextQuestion" />
+    <Button
+        android:id="@+id/next_question"
+        style="@style/NextQuestion" />
 
 </RelativeLayout>

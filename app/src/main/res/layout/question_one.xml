@@ -48,6 +48,8 @@
 
     </RadioGroup>
 
-    <Button style="@style/NextQuestion" />
+    <Button
+        android:id="@+id/next_question"
+        style="@style/NextQuestion" />
 
 </RelativeLayout>

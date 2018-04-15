@@ -1,18 +1,25 @@
 package com.galacticcoders.whowantstobeamartiancolonist;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class QuestionTwo extends AppCompatActivity {
 
+    // boolean for correct answer.
     public boolean correctAnswer = false;
+    // boolean for checking if at least one answer has been selected
+    boolean selectAnswer = false;
+    // boolean for validating answer.
+    boolean checkAnswer = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +44,7 @@ public class QuestionTwo extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    selectAnswer = true;
                     correctAnswer = true;
                     rg_2.clearCheck();
                 }
@@ -45,6 +53,7 @@ public class QuestionTwo extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    selectAnswer = true;
                     rg_2.clearCheck();
                 }
                 break;
@@ -52,6 +61,7 @@ public class QuestionTwo extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    selectAnswer = true;
                     rg_1.clearCheck();
                 }
                 break;
@@ -59,6 +69,7 @@ public class QuestionTwo extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
+                    selectAnswer = true;
                     rg_1.clearCheck();
                 }
                 break;
@@ -67,12 +78,49 @@ public class QuestionTwo extends AppCompatActivity {
 
     // Intent to move to the next question
     public void nextQuestion(View view) {
-        // Add 1 to correctAnswers if the user answer is correct
-        if (correctAnswer) {
-            MainActivity.correctAnswers++;
+
+        if (selectAnswer) {
+            if (checkAnswer) {
+                Intent results = new Intent(this, QuestionThree.class);
+                startActivity(results);
+            } else {
+                checkAnswer = true;
+
+                Button nextQuestion = findViewById(R.id.next_question);
+                nextQuestion.setText(R.string.next_question);
+
+                // Add 1 to correctAnswers if the user answer is correct
+                if (correctAnswer) {
+                    MainActivity.correctAnswers++;
+
+                    // Make background of correct answer to flash
+                    Button validAnswer = findViewById(R.id.mars);
+                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
+                    frameAnimation.start();
+
+                    // Toast message to congratulate
+                    Toast.makeText(this, R.string.CorrectAnswer, Toast.LENGTH_LONG).show();
+
+                } else {
+                    // Make background of correct answer to flash
+                    Button validAnswer = findViewById(R.id.mars);
+                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
+                    frameAnimation.start();
+
+                    // Concatenated strings for the toast message
+                    String incorrectAnswer = getResources().getString(R.string.IncorrectAnswer);
+                    String day_mars = getResources().getString(R.string.day_mars);
+                    String toastAnswer = incorrectAnswer + " " + day_mars;
+
+                    // Toast message for feedback
+                    Toast.makeText(this, toastAnswer, Toast.LENGTH_LONG).show();
+                }
+            }
+        } else {
+            Toast.makeText(this, R.string.SelectAnswer, Toast.LENGTH_SHORT).show();
         }
-        Intent nextQuestion = new Intent(this, QuestionThree.class);
-        startActivity(nextQuestion);
     }
 
     /**
