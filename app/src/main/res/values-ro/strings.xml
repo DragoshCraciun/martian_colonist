@@ -26,4 +26,23 @@
     <string name="year_jupiter">4.333 zile</string>
     <string name="year_mercury">88 zile</string>
     <string name="FinalAnswer">Acesta este răspunsul tău final?</string>
+    <string name="next_question">Urmatoare Intrebare</string>
+    <string name="results">Arata-mi reuzultatul!</string>
+    <string name="day_mars">1z 0h 40m</string>
+    <string name="day_venus">116z 18h 0m</string>
+    <string name="day_mercury">58z 15h 30m</string>
+    <string name="day_jupiter">0z 9h 56m</string>
+    <string name="SelectAnswer">Te rog selecteaza un raspuns!</string>
+    <string name="SelectAnswers">Te rog selecteaza doua raspunsuri!</string>
+    <string name="WriteAnswers">Te rog scrie raspunsurile!</string>
+    <string name="CorrectAnswer">Super, Raspunsul tau este correct!</string>
+    <string name="CorrectAnswers">Super, Raspunsurile tale sunt correcte!</string>
+    <string name="IncorrectAnswer">Oops, Raspunsul tau este incorect!</string>
+    <string name="IncorrectAnswers">Oops, Unul sau mai multe din raspunsurile tale sunt incorecte.</string>
+    <string name="quizOver">Acest formular este gata.</string>
+    <string name="lowScore">I\'mi pare rau!</string>
+    <string name="averageScore">Aproape ai reusit!</string>
+    <string name="highScore">Felicitari, camarade!</string>
+    <string name="bestScore">Esti Nemaipomenit!</string>
+    <string name="martianColonist">% chance</string>
 </resources>

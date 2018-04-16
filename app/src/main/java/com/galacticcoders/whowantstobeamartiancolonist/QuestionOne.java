@@ -53,6 +53,9 @@ public class QuestionOne extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     selectAnswer = true;
                     correctAnswer = true;
+                    helium = false;
+                    nitrogen = false;
+                    oxygen = false;
                     rg_2.clearCheck();
                 }
                 break;
@@ -62,6 +65,9 @@ public class QuestionOne extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     helium = true;
                     selectAnswer = true;
+                    correctAnswer = false;
+                    nitrogen = false;
+                    oxygen = false;
                     rg_2.clearCheck();
                 }
                 break;
@@ -71,6 +77,9 @@ public class QuestionOne extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     nitrogen = true;
                     selectAnswer = true;
+                    correctAnswer = false;
+                    helium = false;
+                    oxygen = false;
                     rg_1.clearCheck();
                 }
                 break;
@@ -80,6 +89,9 @@ public class QuestionOne extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     oxygen = true;
                     selectAnswer = true;
+                    correctAnswer = false;
+                    helium = false;
+                    nitrogen = false;
                     rg_1.clearCheck();
                 }
                 break;
@@ -96,28 +108,37 @@ public class QuestionOne extends AppCompatActivity {
             } else {
                 checkAnswer = true;
 
+                // Change the name of the button from validate to next question
                 Button nextQuestion = findViewById(R.id.next_question);
                 nextQuestion.setText(R.string.next_question);
+
+                // Disable the buttons
+                Button btnHydrogen = (Button) findViewById(R.id.hydrogen);
+                btnHydrogen.setEnabled(false);
+                Button btnHelium = (Button) findViewById(R.id.helium);
+                btnHelium.setEnabled(false);
+                Button btnNitrogen = (Button) findViewById(R.id.nitrogen);
+                btnNitrogen.setEnabled(false);
+                Button btnOxygen = (Button) findViewById(R.id.oxygen);
+                btnOxygen.setEnabled(false);
 
                 // Add 1 to correctAnswers if the user answer is correct
                 if (correctAnswer) {
                     MainActivity.correctAnswers++;
 
                     // Make background of correct answer to flash
-                    Button validAnswer = findViewById(R.id.hydrogen);
-                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
-                    frameAnimation.start();
+                    btnHydrogen.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
+                    AnimationDrawable flashUserHydrogen = (AnimationDrawable) btnHydrogen.getBackground();
+                    flashUserHydrogen.start();
 
                     // Toast message to congratulate
                     Toast.makeText(this, R.string.CorrectAnswer, Toast.LENGTH_LONG).show();
 
                 } else {
                     // Make background of correct answer to flash
-                    Button validAnswer = findViewById(R.id.hydrogen);
-                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
-                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
-                    frameAnimation.start();
+                    btnHydrogen.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                    AnimationDrawable flashHydrogen = (AnimationDrawable) btnHydrogen.getBackground();
+                    flashHydrogen.start();
 
                     // Toast message for feedback
                     Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();

@@ -21,7 +21,7 @@
     <string name="day_jupiter">0d 9h 56m</string>
 
     <!-- Strings for question three -->
-    <string name="question_three">What are the two elements of which Mars atmosphere is made?</string>
+    <string name="question_three">What are the two elements \nof which Mars atmosphere is made?</string>
     <string name="argon">Argon</string>
     <string name="carbon_dioxide">Carbon Dioxide</string>
     <string name="methane">Methane</string>

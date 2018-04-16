@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void next(View view) {
-        Intent nextQuestion = new Intent(this, QuestionTen.class);
+        Intent nextQuestion = new Intent(this, QuestionOne.class);
         startActivity(nextQuestion);
     }
 

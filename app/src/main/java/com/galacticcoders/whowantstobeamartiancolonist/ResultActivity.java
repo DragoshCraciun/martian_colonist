@@ -54,7 +54,7 @@ public class ResultActivity extends AppCompatActivity {
         bestScoreResult += martianColonist;
 
         // Display score based on level
-        if (score <= 0) {
+        if (score <= 1) {
             correctScore.setText(lowScoreResult);
         } else if (score >= 2 && score <= 4) {
             correctScore.setText(averageScoreResult);

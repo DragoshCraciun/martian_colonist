@@ -47,6 +47,8 @@ public class QuestionThree extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     selectAnswer = true;
                     correctAnswer1 = true;
+                } else {
+                    correctAnswer1 = false;
                 }
                 break;
             case R.id.carbon_dioxide:
@@ -55,22 +57,28 @@ public class QuestionThree extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     selectAnswer = true;
                     correctAnswer2 = true;
+                } else {
+                    correctAnswer2 = false;
                 }
                 break;
             case R.id.methane:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    methane = true;
                     selectAnswer = true;
+                    methane = true;
+                } else {
+                    methane = false;
                 }
                 break;
             case R.id.ammonia:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    ammonia = true;
                     selectAnswer = true;
+                    ammonia = true;
+                } else {
+                    ammonia = false;
                 }
                 break;
         }
@@ -86,50 +94,56 @@ public class QuestionThree extends AppCompatActivity {
             } else {
                 checkAnswer = true;
 
+                // Change the name of the button from validate to next question
                 Button nextQuestion = findViewById(R.id.next_question);
                 nextQuestion.setText(R.string.next_question);
 
+                // Disable the buttons
+                Button btnArgon = (Button) findViewById(R.id.argon);
+                btnArgon.setEnabled(false);
+                Button btnCarbonD = (Button) findViewById(R.id.carbon_dioxide);
+                btnCarbonD.setEnabled(false);
+                Button btnMethane = (Button) findViewById(R.id.methane);
+                btnMethane.setEnabled(false);
+                Button btnAmmonia = (Button) findViewById(R.id.ammonia);
+                btnAmmonia.setEnabled(false);
+
+                // Make background of correct answers flash
+                btnArgon.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                AnimationDrawable flashArgon = (AnimationDrawable) btnArgon.getBackground();
+
+                btnCarbonD.setBackground(getResources().getDrawable(R.drawable.a_valid_r_bg));
+                AnimationDrawable flashCarbonD = (AnimationDrawable) btnCarbonD.getBackground();
+
+                // Make background of user correct answers flash
+                btnArgon.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
+                AnimationDrawable flashUserArgon = (AnimationDrawable) btnArgon.getBackground();
+
+                btnCarbonD.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
+                AnimationDrawable flashUserCarbonD = (AnimationDrawable) btnCarbonD.getBackground();
+
                 // Add 1 to correctAnswers if all the user answers are correct
-                if (correctAnswer1 && correctAnswer2) {
+                if (correctAnswer1 && correctAnswer2 && !methane && !ammonia) {
                     MainActivity.correctAnswers++;
 
                     // Make background of correct answer to flash
-                    Button validAnswer1 = findViewById(R.id.argon);
-                    validAnswer1.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                    AnimationDrawable frameAnimation1 = (AnimationDrawable) validAnswer1.getBackground();
-                    frameAnimation1.start();
-
-                    Button validAnswer2 = findViewById(R.id.carbon_dioxide);
-                    validAnswer2.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
-                    AnimationDrawable frameAnimation2 = (AnimationDrawable) validAnswer2.getBackground();
-                    frameAnimation2.start();
+                    flashUserArgon.start();
+                    flashUserCarbonD.start();
 
                     // Toast message to congratulate
-                    Toast.makeText(this, R.string.CorrectAnswer, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.CorrectAnswers, Toast.LENGTH_LONG).show();
 
                 } else {
                     // Make background of correct answer to flash
                     if (correctAnswer1){
-                        Button validAnswer1 = findViewById(R.id.argon);
-                        validAnswer1.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                        AnimationDrawable frameAnimation1 = (AnimationDrawable) validAnswer1.getBackground();
-                        frameAnimation1.start();
+                        flashUserArgon.start();
                     } else {
-                        Button validAnswer1 = findViewById(R.id.argon);
-                        validAnswer1.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
-                        AnimationDrawable frameAnimation1 = (AnimationDrawable) validAnswer1.getBackground();
-                        frameAnimation1.start();
+                        flashArgon.start();
                     }
                     if (correctAnswer2){
-                        Button validAnswer2 = findViewById(R.id.carbon_dioxide);
-                        validAnswer2.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
-                        AnimationDrawable frameAnimation2 = (AnimationDrawable) validAnswer2.getBackground();
-                        frameAnimation2.start();
+                        flashUserCarbonD.start();
                     } else {
-                        Button validAnswer2 = findViewById(R.id.carbon_dioxide);
-                        validAnswer2.setBackground(getResources().getDrawable(R.drawable.a_valid_r_bg));
-                        AnimationDrawable frameAnimation2 = (AnimationDrawable) validAnswer2.getBackground();
-                        frameAnimation2.start();
+                        flashCarbonD.start();
                     }
 
                     // Toast message for feedback

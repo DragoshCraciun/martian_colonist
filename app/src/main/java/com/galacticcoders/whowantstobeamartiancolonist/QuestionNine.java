@@ -51,6 +51,9 @@ public class QuestionNine extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     selectAnswer = true;
                     correctAnswer = true;
+                    venusTemp = false;
+                    earthTemp = false;
+                    mercuryTemp = false;
                     rg_2.clearCheck();
                 }
                 break;
@@ -58,8 +61,11 @@ public class QuestionNine extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    venusTemp = true;
                     selectAnswer = true;
+                    venusTemp = true;
+                    correctAnswer = false;
+                    earthTemp = false;
+                    mercuryTemp = false;
                     rg_2.clearCheck();
                 }
                 break;
@@ -67,8 +73,11 @@ public class QuestionNine extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    earthTemp = true;
                     selectAnswer = true;
+                    earthTemp = true;
+                    correctAnswer = false;
+                    venusTemp = false;
+                    mercuryTemp = false;
                     rg_1.clearCheck();
                 }
                 break;
@@ -76,8 +85,11 @@ public class QuestionNine extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    mercuryTemp = true;
                     selectAnswer = true;
+                    mercuryTemp = true;
+                    correctAnswer = false;
+                    venusTemp = false;
+                    earthTemp = false;
                     rg_1.clearCheck();
                 }
                 break;
@@ -94,38 +106,50 @@ public class QuestionNine extends AppCompatActivity {
             } else {
                 checkAnswer = true;
 
+                // Change the name of the button from validate to next question
                 Button nextQuestion = findViewById(R.id.next_question);
                 nextQuestion.setText(R.string.next_question);
+
+                // Disable the buttons
+                Button btnMarsTemp = (Button) findViewById(R.id.marsTemp);
+                btnMarsTemp.setEnabled(false);
+                Button btnVenusTemp = (Button) findViewById(R.id.venusTemp);
+                btnVenusTemp.setEnabled(false);
+                Button btnJupiterTemp = (Button) findViewById(R.id.earthTemp);
+                btnJupiterTemp.setEnabled(false);
+                Button btnSaturnTemp = (Button) findViewById(R.id.mercuryTemp);
+                btnSaturnTemp.setEnabled(false);
 
                 // Add 1 to correctAnswers if the user answer is correct
                 if (correctAnswer) {
                     MainActivity.correctAnswers++;
 
                     // Make background of correct answer to flash
-                    Button validAnswer = findViewById(R.id.marsTemp);
-                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
-                    frameAnimation.start();
+                    btnMarsTemp.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
+                    AnimationDrawable flashUserMarsTemp = (AnimationDrawable) btnMarsTemp.getBackground();
+                    flashUserMarsTemp.start();
 
                     // Toast message to congratulate
                     Toast.makeText(this, R.string.CorrectAnswer, Toast.LENGTH_LONG).show();
 
                 } else {
                     // Make background of correct answer to flash
-                    Button validAnswer = findViewById(R.id.marsTemp);
-                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
-                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
-                    frameAnimation.start();
+                    btnMarsTemp.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                    AnimationDrawable flashMarsTemp = (AnimationDrawable) btnMarsTemp.getBackground();
+                    flashMarsTemp.start();
 
                     // Toast message for feedback
                     Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();
 
-                // Feedback for wrong answer disclosure.
-                } if (venusTemp) {
+                    // Feedback for wrong answer disclosure.
+                }
+                if (venusTemp) {
                     Toast.makeText(this, R.string.venusTempFeedback, Toast.LENGTH_LONG).show();
-                } if (earthTemp) {
+                }
+                if (earthTemp) {
                     Toast.makeText(this, R.string.earthTempFeedback, Toast.LENGTH_LONG).show();
-                } if (mercuryTemp) {
+                }
+                if (mercuryTemp) {
                     Toast.makeText(this, R.string.mercuryTempFeedback, Toast.LENGTH_LONG).show();
                 }
             }

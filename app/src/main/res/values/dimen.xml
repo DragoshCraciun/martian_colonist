@@ -21,5 +21,6 @@
     <!-- Score dimen. -->
     <dimen name="ScoreHeight">120dp</dimen>
     <dimen name="ScoreMarginBottom">24dp</dimen>
+    <dimen name="ScoreTextSize">12sp</dimen>
 
 </resources>

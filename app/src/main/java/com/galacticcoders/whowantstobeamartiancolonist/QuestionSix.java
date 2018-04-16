@@ -26,6 +26,9 @@ public class QuestionSix extends AppCompatActivity {
     boolean jupiterAU = false;
     boolean saturnAU = false;
 
+    // boolean for AU info toast
+    boolean infoAU = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,41 +49,69 @@ public class QuestionSix extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.marsAU:
                 if (checked) {
-                    // Show validity of the answer as a toast
-                    Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
+                    // Toast for displaying one time info abut AU
+                    if (!infoAU) {
+                        Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
+                        infoAU = true;
+                    }
+                    // Toast for final answer confirmation.
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     selectAnswer = true;
                     correctAnswer = true;
+                    venusAU = false;
+                    jupiterAU = false;
+                    saturnAU = false;
                     rg_2.clearCheck();
                 }
                 break;
             case R.id.venusAU:
                 if (checked) {
-                    // Show validity of the answer as a toast
-                    Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
+                    // Toast for displaying one time info abut AU
+                    if (!infoAU) {
+                        Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
+                        infoAU = true;
+                    }
+                    // Toast for final answer confirmation.
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    venusAU = true;
                     selectAnswer = true;
+                    venusAU = true;
+                    correctAnswer = false;
+                    jupiterAU = false;
+                    saturnAU = false;
                     rg_2.clearCheck();
                 }
                 break;
             case R.id.jupiterAU:
                 if (checked) {
-                    // Show validity of the answer as a toast
-                    Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
+                    // Toast for displaying one time info abut AU
+                    if (!infoAU) {
+                        Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
+                        infoAU = true;
+                    }
+                    // Toast for final answer confirmation.
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    jupiterAU = true;
                     selectAnswer = true;
+                    jupiterAU = true;
+                    correctAnswer = false;
+                    venusAU = false;
+                    saturnAU = false;
                     rg_1.clearCheck();
                 }
                 break;
             case R.id.saturnAU:
                 if (checked) {
-                    // Show validity of the answer as a toast
-                    Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
+                    // Toast for displaying one time info abut AU
+                    if (!infoAU) {
+                        Toast.makeText(this, R.string.AuFeedback, Toast.LENGTH_LONG).show();
+                        infoAU = true;
+                    }
+                    // Toast for final answer confirmation.
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    saturnAU = true;
                     selectAnswer = true;
+                    saturnAU = true;
+                    correctAnswer = false;
+                    venusAU = false;
+                    jupiterAU = false;
                     rg_1.clearCheck();
                 }
                 break;
@@ -97,28 +128,37 @@ public class QuestionSix extends AppCompatActivity {
             } else {
                 checkAnswer = true;
 
+                // Change the name of the button from validate to next question
                 Button nextQuestion = findViewById(R.id.next_question);
                 nextQuestion.setText(R.string.next_question);
+
+                // Disable the buttons
+                Button btnMarsAU = (Button) findViewById(R.id.marsAU);
+                btnMarsAU.setEnabled(false);
+                Button btnVenusAU = (Button) findViewById(R.id.venusAU);
+                btnVenusAU.setEnabled(false);
+                Button btnJupiterAU = (Button) findViewById(R.id.jupiterAU);
+                btnJupiterAU.setEnabled(false);
+                Button btnSaturnAU = (Button) findViewById(R.id.saturnAU);
+                btnSaturnAU.setEnabled(false);
 
                 // Add 1 to correctAnswers if the user answer is correct
                 if (correctAnswer) {
                     MainActivity.correctAnswers++;
 
                     // Make background of correct answer to flash
-                    Button validAnswer = findViewById(R.id.marsAU);
-                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
-                    frameAnimation.start();
+                    btnMarsAU.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
+                    AnimationDrawable flashUserMarsAU= (AnimationDrawable) btnMarsAU.getBackground();
+                    flashUserMarsAU.start();
 
                     // Toast message to congratulate
                     Toast.makeText(this, R.string.CorrectAnswer, Toast.LENGTH_LONG).show();
 
                 } else {
                     // Make background of correct answer to flash
-                    Button validAnswer = findViewById(R.id.marsAU);
-                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
-                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
-                    frameAnimation.start();
+                    btnMarsAU.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                    AnimationDrawable flashMarsAU = (AnimationDrawable) btnMarsAU.getBackground();
+                    flashMarsAU.start();
 
                     // Toast message for feedback
                     Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();

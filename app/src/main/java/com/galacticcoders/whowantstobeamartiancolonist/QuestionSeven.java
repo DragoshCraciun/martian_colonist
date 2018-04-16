@@ -55,136 +55,112 @@ public class QuestionSeven extends AppCompatActivity {
     // Intent to move to the next question
     public void nextQuestion(View view) {
 
-        // giving toast feedback and changing button to move to next question
-        if (inputAnswer) {
-            if (checkAnswer) {
-                Intent results = new Intent(this, QuestionEight.class);
-                startActivity(results);
-            } else {
-                checkAnswer = true;
-
-                Button nextQuestion = findViewById(R.id.next_question);
-                nextQuestion.setText(R.string.next_question);
-
-                // Add 1 to correctAnswers if all user answers are correct
-                if (correctAnswer1 && correctAnswer2 && correctAnswer3 && correctAnswer4) {
-                    MainActivity.correctAnswers++;
-
-                    // Make background of correct answer to flash
-                    EditText validAnswerMars = findViewById(R.id.marsGod);
-                    validAnswerMars.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                    AnimationDrawable flashMars = (AnimationDrawable) validAnswerMars.getBackground();
-                    flashMars.start();
-
-                    EditText validAnswerVenus = findViewById(R.id.venusGod);
-                    validAnswerVenus.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
-                    AnimationDrawable flashVenus = (AnimationDrawable) validAnswerVenus.getBackground();
-                    flashVenus.start();
-
-                    EditText validAnswerJupiter = findViewById(R.id.jupiterGod);
-                    validAnswerJupiter.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                    AnimationDrawable flashJupiter = (AnimationDrawable) validAnswerJupiter.getBackground();
-                    flashJupiter.start();
-
-                    EditText validAnswerNeptune = findViewById(R.id.neptuneGod);
-                    validAnswerNeptune.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
-                    AnimationDrawable flashNeptune = (AnimationDrawable) validAnswerNeptune.getBackground();
-                    flashNeptune.start();
-
-                    // Toast message to congratulate
-                    Toast.makeText(this, R.string.CorrectAnswers, Toast.LENGTH_LONG).show();
-
-                    // Validate individual answers (no points received)
-                } else {
-
-                    // Toast message for feedback
-                    Toast.makeText(this, R.string.IncorrectAnswers, Toast.LENGTH_LONG).show();
-
-                    if (correctAnswer1) {
-                        // Make background of correct answer to flash
-                        EditText validAnswerMars = findViewById(R.id.marsGod);
-                        validAnswerMars.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                        AnimationDrawable flashMars = (AnimationDrawable) validAnswerMars.getBackground();
-                        flashMars.start();
-                    } else {
-                        // Feedback for wrong answer disclosure.
-                        Toast.makeText(this, R.string.marsGodFeedback, Toast.LENGTH_LONG).show();
-                    }
-                    if (correctAnswer2) {
-                        // Make background of correct answer to flash
-                        EditText validAnswerVenus = findViewById(R.id.venusGod);
-                        validAnswerVenus.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
-                        AnimationDrawable flashVenus = (AnimationDrawable) validAnswerVenus.getBackground();
-                        flashVenus.start();
-                    } else {
-                        // Feedback for wrong answer disclosure.
-                        Toast.makeText(this, R.string.venusGodFeedback, Toast.LENGTH_LONG).show();
-                    }
-                    if (correctAnswer3) {
-                        // Make background of correct answer to flash
-                        EditText validAnswerJupiter = findViewById(R.id.jupiterGod);
-                        validAnswerJupiter.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                        AnimationDrawable flashJupiter= (AnimationDrawable) validAnswerJupiter.getBackground();
-                        flashJupiter.start();
-                    } else {
-                        // Feedback for wrong answer disclosure.
-                        Toast.makeText(this, R.string.jupiterGodFeedback, Toast.LENGTH_LONG).show();
-                    }
-                    if (correctAnswer4) {
-                        // Make background of correct answer to flash
-                        EditText validAnswerNeptune = findViewById(R.id.neptuneGod);
-                        validAnswerNeptune.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
-                        AnimationDrawable flashNeptune = (AnimationDrawable) validAnswerNeptune.getBackground();
-                        flashNeptune.start();
-                    } else {
-                        // Feedback for wrong answer disclosure.
-                        Toast.makeText(this, R.string.neptuneGodFeedback, Toast.LENGTH_LONG).show();
-                    }
-                }
-            }
-
-          // give feedback for no input
-        } if (mars.length() == 0 && venus.length() == 0 && jupiter.length() == 0 && neptune.length() == 0) {
+        // Give feedback for no input
+        if (mars.length() == 0 && venus.length() == 0 && jupiter.length() == 0 && neptune.length() == 0) {
             Toast.makeText(this, R.string.WriteAnswers, Toast.LENGTH_SHORT).show();
 
+        } else if (checkAnswer) {
+            // Move to next question
+            Intent results = new Intent(this, QuestionEight.class);
+            startActivity(results);
+
         } else {
-            // validating answers
-            if (mars.getText().toString().trim().equals(getString(R.string.mars_ares))) {
-                inputAnswer = true;
+            checkAnswer = true;
+
+            // validate answers
+            if (mars.getText().toString().trim().equals(getString(R.string.mars_ares)))
                 correctAnswer1 = true;
-            } else {
-                inputAnswer = true;
-            }
-
-            if (venus.getText().toString().trim().equals(getString(R.string.venus_aphrodite))) {
-                inputAnswer = true;
+            if (venus.getText().toString().trim().equals(getString(R.string.venus_aphrodite)))
                 correctAnswer2 = true;
-            } else {
-                inputAnswer = true;
-            }
-
-            if (jupiter.getText().toString().trim().equals(getString(R.string.jupiter_zeus))) {
-                inputAnswer = true;
+            if (jupiter.getText().toString().trim().equals(getString(R.string.jupiter_zeus)))
                 correctAnswer3 = true;
-            } else {
-                inputAnswer = true;
-            }
-
-            if (neptune.getText().toString().trim().equals(getString(R.string.neptune_poseidon))) {
-                inputAnswer = true;
+            if (neptune.getText().toString().trim().equals(getString(R.string.neptune_poseidon)))
                 correctAnswer4 = true;
+
+            // Change the name of the button from validate to next question
+            Button nextQuestion = findViewById(R.id.next_question);
+            nextQuestion.setText(R.string.next_question);
+
+            // Disable the buttons
+            EditText textMarsGod = (EditText) findViewById(R.id.marsGod);
+            textMarsGod.setEnabled(false);
+            EditText textVenusGod = (EditText) findViewById(R.id.venusGod);
+            textVenusGod.setEnabled(false);
+            EditText textJupiterGod = (EditText) findViewById(R.id.jupiterGod);
+            textJupiterGod.setEnabled(false);
+            EditText textNeptuneGod = (EditText) findViewById(R.id.neptuneGod);
+            textNeptuneGod.setEnabled(false);
+
+            // Make background of correct answers flash
+            textMarsGod.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
+            AnimationDrawable flashMars = (AnimationDrawable) textMarsGod.getBackground();
+
+            textVenusGod.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
+            AnimationDrawable flashVenus = (AnimationDrawable) textVenusGod.getBackground();
+
+            textJupiterGod.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
+            AnimationDrawable flashJupiter = (AnimationDrawable) textJupiterGod.getBackground();
+
+            textNeptuneGod.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
+            AnimationDrawable flashNeptune = (AnimationDrawable) textNeptuneGod.getBackground();
+
+            // Add 1 to correctAnswers if all user answers are correct
+            if (correctAnswer1 && correctAnswer2 && correctAnswer3 && correctAnswer4) {
+                MainActivity.correctAnswers++;
+
+                // Flash correct answers
+                flashMars.start();
+                flashVenus.start();
+                flashJupiter.start();
+                flashNeptune.start();
+
+                // Toast message to congratulate
+                Toast.makeText(this, R.string.CorrectAnswers, Toast.LENGTH_LONG).show();
+
+                // Validate individual answers (no points received)
             } else {
-                inputAnswer = true;
+
+                // Toast message for feedback
+                Toast.makeText(this, R.string.IncorrectAnswers, Toast.LENGTH_LONG).show();
+
+                if (correctAnswer1) {
+                    // Make background of correct answer to flash
+                    flashMars.start();
+                } else {
+                    // Feedback for wrong answer disclosure.
+                    Toast.makeText(this, R.string.marsGodFeedback, Toast.LENGTH_LONG).show();
+                }
+                if (correctAnswer2) {
+                    // Make background of correct answer to flash
+                    flashVenus.start();
+                } else {
+                    // Feedback for wrong answer disclosure.
+                    Toast.makeText(this, R.string.venusGodFeedback, Toast.LENGTH_LONG).show();
+                }
+                if (correctAnswer3) {
+                    // Make background of correct answer to flash
+                    flashJupiter.start();
+                } else {
+                    // Feedback for wrong answer disclosure.
+                    Toast.makeText(this, R.string.jupiterGodFeedback, Toast.LENGTH_LONG).show();
+                }
+                if (correctAnswer4) {
+                    // Make background of correct answer to flash
+                    flashNeptune.start();
+                } else {
+                    // Feedback for wrong answer disclosure.
+                    Toast.makeText(this, R.string.neptuneGodFeedback, Toast.LENGTH_LONG).show();
+                }
             }
-
-        }
-    }
-
-        /**
-         * Prevents user to go to the previous question
-         */
-        @Override
-        public void onBackPressed () {
         }
 
     }
+
+    /**
+     * Prevents user to go to the previous question
+     */
+    @Override
+    public void onBackPressed() {
+    }
+
+}

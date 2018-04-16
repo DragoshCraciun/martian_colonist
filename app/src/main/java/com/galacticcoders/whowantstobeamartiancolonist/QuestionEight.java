@@ -47,6 +47,8 @@ public class QuestionEight extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     selectAnswer = true;
                     correctAnswer1 = true;
+                } else {
+                    correctAnswer1 = false;
                 }
                 break;
             case R.id.deimos:
@@ -55,22 +57,28 @@ public class QuestionEight extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     selectAnswer = true;
                     correctAnswer2 = true;
+                } else {
+                    correctAnswer2 = false;
                 }
                 break;
             case R.id.callisto:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    callisto = true;
                     selectAnswer = true;
+                    callisto = true;
+                } else {
+                    callisto = false;
                 }
                 break;
             case R.id.titan:
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    titan = true;
                     selectAnswer = true;
+                    titan = true;
+                } else {
+                    titan = false;
                 }
                 break;
         }
@@ -86,60 +94,67 @@ public class QuestionEight extends AppCompatActivity {
             } else {
                 checkAnswer = true;
 
+                // Change the name of the button from validate to next question
                 Button nextQuestion = findViewById(R.id.next_question);
                 nextQuestion.setText(R.string.next_question);
 
+                // Disable the buttons
+                Button btnPhobos = (Button) findViewById(R.id.phobos);
+                btnPhobos.setEnabled(false);
+                Button btnDeimos = (Button) findViewById(R.id.deimos);
+                btnDeimos.setEnabled(false);
+                Button btnCallisto = (Button) findViewById(R.id.callisto);
+                btnCallisto.setEnabled(false);
+                Button btnTitan = (Button) findViewById(R.id.titan);
+                btnTitan.setEnabled(false);
+
+                // Make background of correct answers flash
+                btnPhobos.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                AnimationDrawable flashPhobos = (AnimationDrawable) btnPhobos.getBackground();
+
+                btnDeimos.setBackground(getResources().getDrawable(R.drawable.a_valid_r_bg));
+                AnimationDrawable flashDeimos = (AnimationDrawable) btnDeimos.getBackground();
+
+                // Make background of user correct answers flash
+                btnPhobos.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
+                AnimationDrawable flashUserPhobos = (AnimationDrawable) btnPhobos.getBackground();
+
+                btnDeimos.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
+                AnimationDrawable flashUserDeimos = (AnimationDrawable) btnDeimos.getBackground();
+
                 // Add 1 to correctAnswers if all the user answers are correct
-                if (correctAnswer1 && correctAnswer2) {
+                if (correctAnswer1 && correctAnswer2 && !callisto && !titan) {
                     MainActivity.correctAnswers++;
 
-                    // Make background of correct answer to flash
-                    Button validAnswer1 = findViewById(R.id.phobos);
-                    validAnswer1.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                    AnimationDrawable frameAnimation1 = (AnimationDrawable) validAnswer1.getBackground();
-                    frameAnimation1.start();
-
-                    Button validAnswer2 = findViewById(R.id.deimos);
-                    validAnswer2.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
-                    AnimationDrawable frameAnimation2 = (AnimationDrawable) validAnswer2.getBackground();
-                    frameAnimation2.start();
+                    // Make background of correct answer to flash 
+                    flashUserPhobos.start();
+                    flashUserDeimos.start();
 
                     // Toast message to congratulate
                     Toast.makeText(this, R.string.CorrectAnswers, Toast.LENGTH_LONG).show();
 
                 } else {
                     // Make background of correct answer to flash
-
                     if (correctAnswer1) {
-                        Button validAnswer1 = findViewById(R.id.phobos);
-                        validAnswer1.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                        AnimationDrawable frameAnimation1 = (AnimationDrawable) validAnswer1.getBackground();
-                        frameAnimation1.start();
+                        flashUserPhobos.start();
                     } else {
-                        Button validAnswer1 = findViewById(R.id.phobos);
-                        validAnswer1.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
-                        AnimationDrawable frameAnimation1 = (AnimationDrawable) validAnswer1.getBackground();
-                        frameAnimation1.start();
+                        flashPhobos.start();
                     }
-                    if (correctAnswer2){
-                        Button validAnswer2 = findViewById(R.id.deimos);
-                        validAnswer2.setBackground(getResources().getDrawable(R.drawable.a_valid_user_r_bg));
-                        AnimationDrawable frameAnimation2 = (AnimationDrawable) validAnswer2.getBackground();
-                        frameAnimation2.start();
+                    if (correctAnswer2) {
+                        flashUserDeimos.start();
                     } else {
-                        Button validAnswer2 = findViewById(R.id.deimos);
-                        validAnswer2.setBackground(getResources().getDrawable(R.drawable.a_valid_r_bg));
-                        AnimationDrawable frameAnimation2 = (AnimationDrawable) validAnswer2.getBackground();
-                        frameAnimation2.start();
+                        flashDeimos.start();
                     }
 
                     // Toast message for feedback
                     Toast.makeText(this, R.string.IncorrectAnswers, Toast.LENGTH_LONG).show();
 
+                }
                 // Feedback for wrong answer disclosure.
-                } if (callisto) {
+                if (callisto) {
                     Toast.makeText(this, R.string.callistoFeedback, Toast.LENGTH_LONG).show();
-                } if (titan) {
+                }
+                if (titan) {
                     Toast.makeText(this, R.string.titanFeedback, Toast.LENGTH_LONG).show();
                 }
             }

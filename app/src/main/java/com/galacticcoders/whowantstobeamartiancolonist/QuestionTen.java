@@ -51,6 +51,9 @@ public class QuestionTen extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     selectAnswer = true;
                     correctAnswer = true;
+                    venusYear = false;
+                    jupiterYear = false;
+                    mercuryYear = false;
                     rg_2.clearCheck();
                 }
                 break;
@@ -58,8 +61,11 @@ public class QuestionTen extends AppCompatActivity {
                 if (checked) {
                     // Show validity of the answer as a toast
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
-                    venusYear = true;
                     selectAnswer = true;
+                    venusYear = true;
+                    correctAnswer = false;
+                    jupiterYear = false;
+                    mercuryYear = false;
                     rg_2.clearCheck();
                 }
                 break;
@@ -69,6 +75,9 @@ public class QuestionTen extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     jupiterYear = true;
                     selectAnswer = true;
+                    correctAnswer = false;
+                    venusYear = false;
+                    mercuryYear = false;
                     rg_1.clearCheck();
                 }
                 break;
@@ -78,6 +87,9 @@ public class QuestionTen extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     mercuryYear = true;
                     selectAnswer = true;
+                    correctAnswer = false;
+                    venusYear = false;
+                    jupiterYear = false;
                     rg_1.clearCheck();
                 }
                 break;
@@ -95,18 +107,28 @@ public class QuestionTen extends AppCompatActivity {
             } else {
                 checkAnswer = true;
 
+                // Change the name of the button from validate to next question
                 Button nextQuestion = findViewById(R.id.next_question);
                 nextQuestion.setText(R.string.results);
+
+                // Disable the buttons
+                Button btnMarsYear = (Button) findViewById(R.id.marsYear);
+                btnMarsYear.setEnabled(false);
+                Button btnVenusYear = (Button) findViewById(R.id.venusYear);
+                btnVenusYear.setEnabled(false);
+                Button btnJupiterYear = (Button) findViewById(R.id.jupiterYear);
+                btnJupiterYear.setEnabled(false);
+                Button btnMercuryYear = (Button) findViewById(R.id.mercuryYear);
+                btnMercuryYear.setEnabled(false);
 
                 // Add 1 to correctAnswers if the user answer is correct.
                 if (correctAnswer) {
                     MainActivity.correctAnswers++;
 
                     // Make background of correct answer to flash.
-                    Button validAnswer = findViewById(R.id.marsYear);
-                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
-                    frameAnimation.start();
+                    btnMarsYear.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
+                    AnimationDrawable flashMarsUserYear = (AnimationDrawable) btnMarsYear.getBackground();
+                    flashMarsUserYear.start();
 
                     // Toast message to congratulate
                     Toast.makeText(this, R.string.CorrectAnswer, Toast.LENGTH_SHORT).show();
@@ -114,10 +136,9 @@ public class QuestionTen extends AppCompatActivity {
 
                 } else {
                     // Make background of correct answer to flash.
-                    Button validAnswer = findViewById(R.id.marsYear);
-                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
-                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
-                    frameAnimation.start();
+                    btnMarsYear.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                    AnimationDrawable flashMarsYear = (AnimationDrawable) btnMarsYear.getBackground();
+                    flashMarsYear.start();
 
                     // Toast message for feedback.
                     Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();

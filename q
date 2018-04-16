@@ -1,0 +1,281 @@
+[33mcommit 41cc9687615ed7b78c4c2c322c455a2f85b81b2f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: DragoshCraciun <dragosh.craciun@gmail.com>
+Date:   Sun Apr 15 22:32:48 2018 +0200
+
+    refactor: Use strings for displaying score
+
+[33mcommit eed61a9e346de41e73baa81fd5c8991cefa842f5[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: DragoshCraciun <dragosh.craciun@gmail.com>
+Date:   Sun Apr 15 21:58:41 2018 +0200
+
+    feat: Combine flash user answer and correct answer
+    
+    The flashing of correct answer is not combined with user answer and
+    depited in alternated colors.
+
+[33mcommit eae2297bfe764c540d93ce8013a5013a90284a63[m
+Author: DragoshCraciun <dragosh.craciun@gmail.com>
+Date:   Sun Apr 15 21:43:39 2018 +0200
+
+    feat: Feedback for wrong answer disclosure
+    
+    If the user picks a wrong answer he/she will be informed about the
+    truth of that answer.
+
+[33mcommit 27d448d7e00a267e26303515d0bd37b42bdb2a20[m
+Author: DragoshCraciun <dragosh.craciun@gmail.com>
+Date:   Sun Apr 15 18:29:29 2018 +0200
+
+    style: Change in the questions format
+    
+    The questions have been formated so they can be displayed on screen.
+
+[33mcommit 96d8d2b199b51644f4fffb3babb283df6d177cdb[m
+Author: DragoshCraciun <dragosh.craciun@gmail.com>
+Date:   Sun Apr 15 18:07:26 2018 +0200
+
+    feat: Display result feedback based on level
+    
+    The result feedback is now displayed based on three levels: few correct
+    answers, around half of correct answers and almost all correct answers.
+
+[33mcommit cc9608bfc1d4128f59d87efa6ac21fc5ffd85284[m
+Author: DragoshCraciun <dragosh.craciun@gmail.com>
+Date:   Sun Apr 15 17:48:07 2018 +0200
+
+    feat: Improved feedback
+    
+    Feedback is now impoved with more toast messages and fashing correct answers.
+
+[33mcommit 3775bc1b168fd81950776f194e1b42e836817e67[m
+Author: DragoshCraciun <dragosh.craciun@gmail.com>
+Date:   Sat Apr 14 14:56:45 2018 +0200
+
+    refactor: Renaming boolean
+    
+    Boolean rightAnswer has been renamed to correctAnswer
+
+[33mcommit c4bc4cc5832620cc3ffaaec6c28766117e73eda8[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Wed Feb 7 21:34:48 2018 +0100
+
+    feat: Romanian language is now supported
+    
+    The app now can display the question in the romanian language.
+
+[33mcommit 3ccdab0f055afa241d13c2267eef78ce1f816baa[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Tue Feb 6 21:37:45 2018 +0100
+
+    fix: Crash on question four
+    
+    App crashing when selecting radio group one answers. This was caused
+    by the missing id of the radio group two, which java was unable to
+    clearCheack().
+
+[33mcommit d6ff90c3fb30d20261b716d65bbadf79d706ef9d[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Tue Feb 6 21:31:23 2018 +0100
+
+    feat: Click on the score to play again
+    
+    Now when you click on your score you can play the quizz again.
+
+[33mcommit b7fc3967cb53cb7637ddcc3d687a86d629f0d4e2[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Sun Feb 4 20:31:43 2018 +0100
+
+    refactor: Dimensions resource and better styles
+    
+    Dimensions are now used as a resource. More of the views attributes
+    are now included in the styles. The toast message have is now
+    included in strings resource.
+
+[33mcommit b5cc60bbe195162a3629420c7d725361b4ebb710[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Tue Jan 30 21:45:35 2018 +0100
+
+    fix: Score is now displayed correctly
+    
+    The score now gets iterated only one time per question.
+
+[33mcommit 10538906c2d83f84109d24c62aefcd596e8225cc[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Tue Jan 30 21:05:12 2018 +0100
+
+    feat: Design display for the results page
+    
+    Now the results page is displayed in the new format. The design
+    works also in landscape mode.# Please enter the commit message for your changes. Lines starting
+
+[33mcommit f31c3b0efc811fe0433569d3a80ff2f03dce0066[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Tue Jan 30 19:32:42 2018 +0100
+
+    fix: Broken link for nextQuestion
+    
+    Fixed the issues with the broken links. Also as a secondary fix
+    I've named the same all the methods that are called when the user
+    clicks one of the answers.
+
+[33mcommit 6af48400a1c9e36b1c6b9aa6bc4de6d43c60e2a5[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Mon Jan 29 18:56:16 2018 +0100
+
+    fix: App crush on user input question seven
+    
+    Fixed the issues. The user input of the answer was calling another method.
+
+[33mcommit 174b46fc9f394f005a1df1f058cb73359f2805f9[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Sun Jan 28 22:37:14 2018 +0100
+
+    feat: Design display for the edit text questions
+    
+    Now the edit text question is displayed in the new format. The design
+    works also in landscape mode.
+
+[33mcommit 0d268f8b8a294d4548e3c4b148bbf379ee50eb05[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Sun Jan 28 22:08:08 2018 +0100
+
+    feat: Design display for all checkbox questions
+    
+    The two radio question (three and eight) are now displayed in the new format. The design works
+    also in landscape mode.
+
+[33mcommit b3dc2b3819e80ad3c1b77b5254b341d62ecb0282[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Sun Jan 28 21:28:59 2018 +0100
+
+    feat: Design display for all radio questions
+    
+    All radio question are now displayed in the new format. The design works
+    also in landscape mode.
+
+[33mcommit 8ddfa2f4e3d087ca52a0b1602a08ad7d4d22cc65[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Sun Jan 28 20:21:28 2018 +0100
+
+    refactor: Rename some of the text string resources
+    
+    Some of the string resources for text have been renamed for better.
+    Also some code has been refactor inside QuestionOne.java and inside
+    question_one.xml
+
+[33mcommit c8849ca250bca39ac494c5efda604df284e50baa[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Sun Jan 28 18:45:34 2018 +0100
+
+    feat: Change button background when selected
+    
+    The button background now changes when selected. Radio buttons
+    are now in two radio groups, in order to avoid multi selection
+    a clearCheck() method has been applied inside the switch case.
+
+[33mcommit ea436bb696a309ac9f195a6020fc212bca5eb405[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Sat Jan 27 22:04:18 2018 +0100
+
+    refactor: String resource for styles and colors
+    
+    Use string resources for styles inside the app.
+
+[33mcommit 4bc52cd326521c84fd08e389ed871d3850278287[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Sat Jan 27 21:32:12 2018 +0100
+
+    feat: Design display for question one
+    
+    Question one now is displayed in a new format. The design works
+    also in landscape mode.
+
+[33mcommit 7c1734ee583541e0ffaf516cb405aa30d9b90d1c[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Sat Jan 27 15:25:21 2018 +0100
+
+    feat: Design a welcome screen for the main activity
+    
+    The root view has been changed from LinearLayout to RelativeLayout.
+    Two ImageViews have been added containing the background image
+    and one containing the logo. The button now has a background.
+
+[33mcommit 62c15e7ec994ba8da933c933dd7841fb02388cd5[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Sat Jan 27 15:06:48 2018 +0100
+
+    feat: Make app work in full-screen mode
+    
+    The app now works in full-screen mode with no action bar.# Please enter the commit message for your changes. Lines starting
+
+[33mcommit 0eefd5cc25e6619efd75567b3226746eaca56f39[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Thu Jan 25 22:18:47 2018 +0100
+
+    refactor: String resource for text
+    
+    Use string resources for all text strings inside the app.
+
+[33mcommit b373de82fc5887a25b7e91dd6ad3e95844f600e4[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Thu Jan 25 21:05:01 2018 +0100
+
+    feat: Display question seven, eight, nine and ten
+    
+    Question seven, eight, nine and ten have been added. They include
+    EditText, Checkbox, RadioButton, RadioButton. The score is kept
+    and displayed at the end of the quiz on the result page.
+
+[33mcommit 786a2e89032ee8de2ae6dc5e26425d42fcc589d8[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Wed Jan 24 21:36:15 2018 +0100
+
+    feat: Display forth, fifth and sixth questions
+    
+    Radio button question forth, fifth and sixth has been added.
+    The score gets validated after answering the sixth question.
+
+[33mcommit 9e49f1d40d579edd73380c6d32fab01ddf4474e9[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Wed Jan 24 19:39:58 2018 +0100
+
+    feat: Display third question with checboxes
+    
+    Implement the third question and displayed it with checkboxes.
+    The score is validated and added to the results screen. Second
+    question screen is now leading to the third question. Third question
+    screen is now leading to the results page.v
+
+[33mcommit b73caadc5971753e56092e204d5b67fd4736d97a[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Tue Jan 23 22:15:25 2018 +0100
+
+    feat: Display Result Page
+    
+    Result page added. Now the code gets validated and the score
+    gets shown on the result page. Also, code added to prevent user
+    to go the previous question.
+
+[33mcommit 12d40ae4f8f5c4fcf50b4f6525548020f86619a1[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Mon Jan 22 22:04:29 2018 +0100
+
+    feat: Display second question and welcome screen
+    
+    The welcome screen and each question have their own activity.
+    By clicking the right answer the user surfs to the next screen.
+
+[33mcommit 7cc6cd115d18deb4834f4884f02d1778adaf9c1e[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Mon Jan 22 20:32:01 2018 +0100
+
+    feat: Display first question
+    
+    Display first question on a single screen. Make radio buttons
+    validate the user answer by displaying a toast.
+
+[33mcommit 70cc1fdb413abd58f2f2b5c332852daeca7ad0a3[m
+Author: dragosh craciun <dragosh.craciun@gmail.com>
+Date:   Mon Jan 22 19:00:10 2018 +0100
+
+    Initial Commit

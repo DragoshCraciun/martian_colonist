@@ -52,6 +52,9 @@ public class QuestionFive extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     selectAnswer = true;
                     correctAnswer = true;
+                    earthG = false;
+                    jupiterG = false;
+                    venusG = false;
                     rg_2.clearCheck();
                 }
                 break;
@@ -61,6 +64,9 @@ public class QuestionFive extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     earthG = true;
                     selectAnswer = true;
+                    correctAnswer = false;
+                    jupiterG = false;
+                    venusG = false;
                     rg_2.clearCheck();
                 }
                 break;
@@ -70,6 +76,9 @@ public class QuestionFive extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     jupiterG = true;
                     selectAnswer = true;
+                    correctAnswer = false;
+                    earthG = false;
+                    venusG = false;
                     rg_1.clearCheck();
                 }
                 break;
@@ -79,6 +88,9 @@ public class QuestionFive extends AppCompatActivity {
                     Toast.makeText(this, R.string.FinalAnswer, Toast.LENGTH_SHORT).show();
                     venusG = true;
                     selectAnswer = true;
+                    correctAnswer = false;
+                    earthG = false;
+                    jupiterG = false;
                     rg_1.clearCheck();
                 }
                 break;
@@ -95,28 +107,37 @@ public class QuestionFive extends AppCompatActivity {
             } else {
                 checkAnswer = true;
 
+                // Change the name of the button from validate to next question
                 Button nextQuestion = findViewById(R.id.next_question);
                 nextQuestion.setText(R.string.next_question);
+
+                // Disable the buttons
+                Button btnMarsG = (Button) findViewById(R.id.marsG);
+                btnMarsG.setEnabled(false);
+                Button btnEarthG = (Button) findViewById(R.id.earthG);
+                btnEarthG.setEnabled(false);
+                Button btnJupiterG = (Button) findViewById(R.id.jupiterG);
+                btnJupiterG.setEnabled(false);
+                Button btnVenusG = (Button) findViewById(R.id.venusG);
+                btnVenusG.setEnabled(false);
 
                 // Add 1 to correctAnswers if the user answer is correct
                 if (correctAnswer) {
                     MainActivity.correctAnswers++;
 
                     // Make background of correct answer to flash
-                    Button validAnswer = findViewById(R.id.marsG);
-                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
-                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
-                    frameAnimation.start();
+                    btnMarsG.setBackground(getResources().getDrawable(R.drawable.a_valid_user_l_bg));
+                    AnimationDrawable flashUserMarsG = (AnimationDrawable) btnMarsG.getBackground();
+                    flashUserMarsG.start();
 
                     // Toast message to congratulate
                     Toast.makeText(this, R.string.CorrectAnswer, Toast.LENGTH_LONG).show();
 
                 } else {
                     // Make background of correct answer to flash
-                    Button validAnswer = findViewById(R.id.marsG);
-                    validAnswer.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
-                    AnimationDrawable frameAnimation = (AnimationDrawable) validAnswer.getBackground();
-                    frameAnimation.start();
+                    btnMarsG.setBackground(getResources().getDrawable(R.drawable.a_valid_l_bg));
+                    AnimationDrawable flashMarsG = (AnimationDrawable) btnMarsG.getBackground();
+                    flashMarsG.start();
 
                     // Toast message for feedback
                     Toast.makeText(this, R.string.IncorrectAnswer, Toast.LENGTH_SHORT).show();
