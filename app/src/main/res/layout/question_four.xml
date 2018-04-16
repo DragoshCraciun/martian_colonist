@@ -19,9 +19,9 @@
             style="@style/AnswerGroup">
 
             <RadioButton
-                android:id="@+id/marsAtm"
+                android:id="@+id/earthAtm"
                 style="@style/AnswerLeft"
-                android:text="@string/atm_mars" />
+                android:text="@string/atm_earth" />
 
             <RadioButton
                 android:id="@+id/venusAtm"
@@ -35,9 +35,9 @@
             style="@style/AnswerGroup">
 
             <RadioButton
-                android:id="@+id/earthAtm"
+                android:id="@+id/marsAtm"
                 style="@style/AnswerLeft"
-                android:text="@string/atm_earth" />
+                android:text="@string/atm_mars" />
 
             <RadioButton
                 android:id="@+id/titanAtm"

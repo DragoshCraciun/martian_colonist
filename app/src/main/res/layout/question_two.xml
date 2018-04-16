@@ -19,9 +19,9 @@
             style="@style/AnswerGroup">
 
             <RadioButton
-                android:id="@+id/mars"
+                android:id="@+id/mercury"
                 style="@style/AnswerLeft"
-                android:text="@string/day_mars" />
+                android:text="@string/day_mercury" />
 
             <RadioButton
                 android:id="@+id/venus"
@@ -35,9 +35,9 @@
             style="@style/AnswerGroup">
 
             <RadioButton
-                android:id="@+id/mercury"
+                android:id="@+id/mars"
                 style="@style/AnswerLeft"
-                android:text="@string/day_mercury" />
+                android:text="@string/day_mars" />
 
             <RadioButton
                 android:id="@+id/jupiter"

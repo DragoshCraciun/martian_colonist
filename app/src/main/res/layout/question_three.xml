@@ -17,9 +17,9 @@
         <LinearLayout style="@style/AnswerGroup">
 
             <CheckBox
-                android:id="@+id/argon"
+                android:id="@+id/methane"
                 style="@style/AnswerLeft"
-                android:text="@string/argon" />
+                android:text="@string/methane" />
 
             <CheckBox
                 android:id="@+id/carbon_dioxide"
@@ -31,9 +31,10 @@
         <LinearLayout style="@style/AnswerGroup">
 
             <CheckBox
-                android:id="@+id/methane"
+                android:id="@+id/argon"
                 style="@style/AnswerLeft"
-                android:text="@string/methane" />
+                android:text="@string/argon" />
+
 
             <CheckBox
                 android:id="@+id/ammonia"

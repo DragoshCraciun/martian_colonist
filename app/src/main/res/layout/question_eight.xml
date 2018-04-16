@@ -17,6 +17,20 @@
         <LinearLayout style="@style/AnswerGroup">
 
             <CheckBox
+                android:id="@+id/callisto"
+                style="@style/AnswerLeft"
+                android:text="@string/callisto" />
+
+            <CheckBox
+                android:id="@+id/titan"
+                style="@style/AnswerRight"
+                android:text="@string/titan" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/AnswerGroup">
+
+            <CheckBox
                 android:id="@+id/phobos"
                 style="@style/AnswerLeft"
                 android:text="@string/phobos" />
@@ -26,19 +40,6 @@
                 style="@style/AnswerRight"
                 android:text="@string/deimos" />
 
-        </LinearLayout>
-
-        <LinearLayout style="@style/AnswerGroup">
-
-            <CheckBox
-                android:id="@+id/callisto"
-                style="@style/AnswerLeft"
-                android:text="@string/callisto" />
-
-            <CheckBox
-                android:id="@+id/titan"
-                style="@style/AnswerRight"
-                android:text="@string/titan" />
 
         </LinearLayout>
 
